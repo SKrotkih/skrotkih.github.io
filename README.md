@@ -1,1 +1,0 @@
-# skrotkih.github.io
