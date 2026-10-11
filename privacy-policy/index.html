@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emdalex Streams — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+         max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 30px; margin-bottom: 4px; }
+  h2 { font-size: 21px; margin-top: 36px; }
+  .meta { opacity: .7; margin-top: 0; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: #B3261E; }
+  code { font-size: 0.9em; word-break: break-all; }
+</style>
+</head>
+<body>
+
+<h1>Emdalex Streams — Privacy Policy</h1>
+<p class="meta">Effective date: October 11, 2026 · Developer: Serhii Krotkykh · Contact: <a href="mailto:sergey.krotkih@gmail.com">sergey.krotkih@gmail.com</a></p>
+
+<p>This Privacy Policy describes what information the Emdalex Streams application for iOS and Android (“the app”, “we”, “us”) accesses, how it is used, where it is stored, with whom it is shared and how you can control it. It applies to the app only; the pages of this website collect nothing.</p>
+
+<p><strong>In short:</strong> the app has no servers of its own. It runs entirely on your phone and talks only to Google’s YouTube services, on your behalf and with your permission. We — the developer — never receive, store or see any of your data.</p>
+
+<h2>1. Information the app accesses</h2>
+
+<h3>1.1 Google account information (via Google Sign-In)</h3>
+<p>When you sign in with Google, the app receives from Google:</p>
+<ul>
+  <li>your name and profile picture,</li>
+  <li>your e-mail address,</li>
+  <li>an OAuth access token and refresh token for the YouTube channel you selected (your own channel, or a brand-account channel you manage).</li>
+</ul>
+<p><strong>Why:</strong> the name and picture are shown in the app’s side menu so you can see which account is signed in; your name is also added to the streams you create so that members of a shared channel can tell whose stream is whose. The tokens let the app call the YouTube API on your behalf.</p>
+<p><strong>Where:</strong> on iPhone, tokens are stored in the iOS Keychain on your device; on Android, they are managed by Google Play services on your device, and the app does not store them itself; name, e-mail and picture are kept in the app’s memory and local storage on your device only. Nothing is transmitted to us.</p>
+
+<h3>1.2 YouTube data (via the YouTube Data API)</h3>
+<p>The app uses <strong>YouTube API Services</strong> with the OAuth scope <code>https://www.googleapis.com/auth/youtube.force-ssl</code>. With it the app, acting as you:</p>
+<ul>
+  <li><strong>reads</strong> the list of live broadcasts on your channel — title, description, scheduled and actual start/end times, privacy status, thumbnail, status (scheduled, live, completed) — to show them on the app’s Scheduled, Ready, Live and Completed tabs;</li>
+  <li><strong>creates</strong> live broadcasts and the associated live streams (the RTMP ingestion address your phone streams to) when you schedule or start a stream;</li>
+  <li><strong>updates</strong> a broadcast’s title, description, start time and privacy status when you edit it;</li>
+  <li><strong>starts and ends</strong> broadcasts (transitions to “live” and “complete”) when you go live or press Finish;</li>
+  <li><strong>deletes</strong> a broadcast, its recording and its stream when you delete it in the app.</li>
+</ul>
+<p><strong>Why:</strong> these are the app’s features — there is no other use. The app does not read your comments, subscriptions, watch history, playlists or any videos other than the live broadcasts listed above, and it does not use YouTube data for advertising, analytics, profiling or training of any kind.</p>
+<p><strong>Where:</strong> YouTube data is fetched from Google when the app is open and held in memory for display; thumbnails are cached on the device. Nothing is copied to any server of ours. When you sign out or delete the app, all of it is gone from the device.</p>
+
+<h3>1.3 Camera and microphone</h3>
+<p>When you start a stream, the app captures video and audio and sends them directly from your phone to YouTube’s ingestion servers (RTMP). The app does not record, store or analyse this content. The recording that appears on YouTube afterwards is created and stored by YouTube under your account.</p>
+
+<h3>1.4 Location</h3>
+<p>With your permission, the app uses your current location once, when you create a stream, to pre-fill the stream description with a street address. You can edit or delete this text before saving. The address becomes part of the stream’s description on YouTube; the app does not store location data and does not use it for anything else. Location is used only while the app is open (“When In Use”), and the app works without it.</p>
+
+<h3>1.5 Notifications</h3>
+<p>With your permission, the app schedules local notifications on your device to remind you when a scheduled stream is due to start. They are generated on the device; no push-notification service is involved.</p>
+
+<h2>2. Information we collect</h2>
+<p><strong>None.</strong> We have no backend, database, analytics, advertising, crash-reporting or tracking SDKs. The app sends no data to us and no data to any third party other than Google as described in this policy. We cannot see who uses the app, what they stream or where they are.</p>
+
+<h2>3. How information is shared</h2>
+<p>Your data is shared with exactly one party: <strong>Google</strong> (Google Sign-In, YouTube Data API, YouTube live ingestion and playback), because streaming to YouTube requires it. Google’s handling of your data is governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. We do not sell, rent or transfer your data to anyone, and we have nothing to transfer.</p>
+
+<h2>4. Data retention and deletion</h2>
+<ul>
+  <li><strong>On your device:</strong> tokens, profile details and cached thumbnails are removed when you sign out (side menu → Log Out) or delete the app.</li>
+  <li><strong>On YouTube:</strong> streams and recordings belong to your channel, not to the app. Delete them in the app or in <a href="https://studio.youtube.com">YouTube Studio</a>; deletion is performed in your YouTube account and is final.</li>
+  <li><strong>With us:</strong> there is nothing to retain or delete, because we hold no data.</li>
+</ul>
+
+<h2>5. Your choices and controls</h2>
+<ul>
+  <li><strong>Revoke the app’s access</strong> to your Google account at any time on the <a href="https://security.google.com/settings/security/permissions">Google security settings page</a> (<a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>). The app then can no longer act on your channel.</li>
+  <li><strong>Sign out</strong> in the app’s side menu to remove tokens and profile data from your device.</li>
+  <li><strong>Camera, microphone, location and notification</strong> permissions can be changed at any time in iOS Settings → Emdalex Streams or in Android Settings → Apps → Emdalex Streams → Permissions. The app streams only while you have started a stream and only with camera and microphone access granted.</li>
+  <li><strong>Privacy of your streams:</strong> new streams are <em>unlisted</em> by default; you choose private, unlisted or public for each stream.</li>
+</ul>
+
+<h2>6. Google API Services — Limited Use</h2>
+<p>Emdalex Streams’s use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes">Google API Services User Data Policy</a>, including the Limited Use requirements. Google user data is used only to provide the user-facing live-streaming features described above; it is never used for advertising, never sold, never used to train models, and never transferred to anyone except as necessary to provide those features, to comply with the law, or as part of a merger or acquisition with notice to users. Humans never read it, because no copy of it ever reaches us.</p>
+
+<h2>7. Security</h2>
+<p>All communication with Google uses HTTPS (and RTMPS-capable ingestion where YouTube offers it). Tokens are kept in the iOS Keychain on iPhone and by Google Play services on Android, protected by the device lock and the operating system’s security. Because there is no server, there is no server-side data that could be breached.</p>
+
+<h2>8. Children</h2>
+<p>The app is not directed at children under 13 and requires a Google account that meets Google’s age requirements. We knowingly collect no information from anyone, including children.</p>
+
+<h2>9. Changes to this policy</h2>
+<p>If this policy changes, the updated version is published at this address with a new effective date. Material changes are also noted in the app’s release notes.</p>
+
+<h2>10. Contact</h2>
+<p>Questions about this policy or about your data: <a href="mailto:sergey.krotkih@gmail.com">sergey.krotkih@gmail.com</a>. This app is developed and published by Serhii Krotkykh, Kharkiv, Ukraine.</p>
+
+</body>
+</html>
