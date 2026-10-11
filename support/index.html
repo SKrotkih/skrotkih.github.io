@@ -9,66 +9,194 @@
   body { font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
          max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
   h1 { font-size: 30px; margin-bottom: 4px; }
-  h2 { font-size: 21px; margin-top: 36px; }
-  h3 { font-size: 17px; margin-top: 24px; }
+  h2 { font-size: 23px; margin-top: 44px; padding-top: 20px; border-top: 1px solid rgba(128,128,128,.35); }
+  h3 { font-size: 17px; margin-top: 26px; }
   .meta { opacity: .7; margin-top: 0; }
   a { color: #B3261E; }
+  ol, ul { padding-left: 22px; }
+  li { margin: 8px 0; }
+  .note { padding: 12px 16px; border-left: 4px solid #B3261E; background: rgba(179,38,30,.07); border-radius: 6px; margin: 16px 0; }
   .contact { padding: 16px 20px; border: 1px solid rgba(128,128,128,.35); border-radius: 12px; margin-top: 12px; }
-  ol { padding-left: 22px; }
-  li { margin: 6px 0; }
+  kbd { font: inherit; font-weight: 600; }
+  .pages { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 16px 0 8px; font-size: 15px; }
+  .pages b { color: inherit; }
+  .toc { font-size: 15px; }
+  .toc li { margin: 4px 0; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid rgba(128,128,128,.35); font-size: 15px; }
+  footer a { margin-right: 18px; }
 </style>
 </head>
 <body>
 
-<h1>Emdalex Streams — Support</h1>
-<p class="meta">Live video from your phone to your own YouTube channel.</p>
+<p class="meta"><a href="/">Emdalex Streams</a> · Support</p>
+<nav class="pages">
+  <b>Using the app</b>
+  <a href="/support/channel/">Your own YouTube channel</a>
+  <a href="/support/group/">A channel for your group</a>
+</nav>
+
+<h1>Using Emdalex Streams</h1>
+<p>Emdalex Streams sends live video from your phone to <em>your own</em> YouTube channel. This page walks you through the app from the first sign-in to a finished recording.</p>
 
 <div class="contact">
   <strong>Need help?</strong> Write to <a href="mailto:sergey.krotkih@gmail.com">sergey.krotkih@gmail.com</a>.
   Please include your phone model, iOS or Android version and, if possible, a screenshot — we usually answer within two business days.
 </div>
 
-<h2>Getting started</h2>
+<ul class="toc">
+  <li><a href="#before">Before you start</a></li>
+  <li><a href="#sign-in">Sign in</a></li>
+  <li><a href="#screen">The main screen</a></li>
+  <li><a href="#go-live">Go live right now</a></li>
+  <li><a href="#schedule">Schedule a stream</a></li>
+  <li><a href="#from-file">Stream a video file</a></li>
+  <li><a href="#finish">Finish a stream</a></li>
+  <li><a href="#watch">Watch streams and recordings</a></li>
+  <li><a href="#faq">Questions and problems</a></li>
+  <li><a href="#revoke-access">Remove the app's access to your Google Account</a></li>
+</ul>
+
+<h2 id="before">Before you start</h2>
+<p>You need two things:</p>
 <ol>
-  <li>Open the app and sign in with your Google account. If you manage several YouTube channels, pick the one you want to stream to.</li>
-  <li>Enter your name when asked — it is added to your streams so the people you share the channel with can tell them apart.</li>
-  <li>Press <strong>Stream</strong> to go live right away, or <strong>Schedule a new stream</strong> to set a start time and a duration.</li>
-  <li>Scheduled streams start by themselves at their start time while the app is open; if the app is in the background, you get a notification at that moment.</li>
-  <li>Press <strong>Finish</strong> to end a stream. The recording appears on the <strong>Completed</strong> tab a moment later.</li>
+  <li><strong>A Google account with a YouTube channel.</strong> Any Gmail address is a Google account. If you have never created a YouTube channel, follow <a href="/support/channel/">Your own YouTube channel</a> — it takes a few minutes.</li>
+  <li><strong>Live streaming switched on for that channel.</strong> YouTube turns it on once per channel, after a phone verification and a wait of up to 24 hours. The same page shows how: <a href="/support/channel/#enable-streaming">Enable live streaming</a>.</li>
+</ol>
+<p>Want to stream together with your family or a group into one shared channel? Then the group's organizer sets up the channel once: <a href="/support/group/">A channel for your group</a>. Members only need their own Google account.</p>
+
+<h2 id="sign-in">Sign in</h2>
+<p>Signing in answers two different questions, so Google may ask you to choose twice:</p>
+<ul>
+  <li><strong>Who are you?</strong> — the Google account (your e-mail) you sign in with.</li>
+  <li><strong>Which YouTube channel should the app work with?</strong> — your own channel, or a group channel you were invited to.</li>
+</ul>
+
+<h3>Steps</h3>
+<ol>
+  <li>Open the app, swipe through the short introduction and tap <kbd>Get started</kbd> (or <kbd>Skip</kbd>).</li>
+  <li>Tap <kbd>Sign in with Google</kbd>. On iPhone the system asks whether the app may use <em>google.com</em> to sign in — tap <kbd>Continue</kbd>.</li>
+  <li><strong>Choose an account.</strong> Pick your Google account (your e-mail). If it is not in the list, tap <kbd>Use another account</kbd> and enter the e-mail and password.</li>
+  <li><strong>Choose your account or a brand account.</strong> If your Google account has access to more than one YouTube channel, Google shows a second list. It looks similar to the first one, but now you are choosing the <em>channel</em>:
+    <ul>
+      <li>to stream to <strong>your own channel</strong>, tap your name again (the first line, with your e-mail);</li>
+      <li>to stream to a <strong>group channel</strong>, tap the group's name.</li>
+    </ul>
+    If you have only one channel, Google skips this step.
+  </li>
+  <li><strong>Allow access.</strong> Google lists what Emdalex Streams asks for. Make sure <em>Manage your YouTube account</em> is ticked, then tap <kbd>Continue</kbd>. The app needs it to create, start and stop streams on your channel; without it the app shows <em>YouTube permissions</em> — tap <kbd>Grant</kbd> and tick the box.</li>
+</ol>
+<p>The channel you are signed in to is shown at the top of the side menu (tap <kbd>☰</kbd> in the top-left corner). To switch to another channel, open the side menu, tap <kbd>Log Out</kbd> and sign in again, choosing the other channel in step 4.</p>
+<div class="note">You stay signed in: next time the app opens straight on the main screen.</div>
+
+<h2 id="screen">The main screen</h2>
+<p>At the bottom there are four tabs — a stream moves through them from left to right:</p>
+<ul>
+  <li><strong>Scheduled</strong> — streams planned for later. The <kbd>+</kbd> button in the header creates a new one.</li>
+  <li><strong>Ready</strong> — streams that start within the next 15 minutes, with a countdown. A stream that was not started in time moves to <em>Expired</em> (red date); tap it to set a new time.</li>
+  <li><strong>Live</strong> — streams on air right now, from this phone or any other phone signed in to the same channel.</li>
+  <li><strong>Completed</strong> — finished streams. Their recordings are on YouTube; search them by title or sort by date.</li>
+</ul>
+<p>Your own streams are marked with a <strong>green dot</strong>. Only you can start, edit, finish or delete them; on a group channel you see the others' streams too, but cannot change them. To delete one of your streams, swipe its row to the left.</p>
+<p>The side menu (<kbd>☰</kbd>) has <kbd>Quick Start</kbd> (the introduction again), <kbd>Open the guide</kbd> (this page), <kbd>Watch group streams</kbd> (settings) and <kbd>Log Out</kbd>.</p>
+
+<h2 id="go-live">Go live right now</h2>
+<ol>
+  <li>Hold the phone the way you want the video to look — upright or sideways. The orientation is fixed when the stream starts and stays the same until the end.</li>
+  <li>Tap the round red <kbd>▶</kbd> button above the tabs. The first time, allow access to the camera, microphone and (optionally) location.</li>
+  <li>The camera screen opens. The label at the bottom shows what is happening: <em>Preparing</em> → <em>Connecting</em> → <em>Sending video…</em> → <strong>LIVE</strong>. Going live usually takes 10–30 seconds — YouTube needs that time to receive the first video.</li>
+  <li>When the label turns to <strong>LIVE</strong>, the phone plays a short chime: you are on air.</li>
+</ol>
+<p>The stream is titled <em>Emdalex Streams</em>; if you allowed location, its description holds the street address. You can change both when you finish.</p>
+<p>Changed your mind before <strong>LIVE</strong>? Tap <kbd>Back</kbd> or the stop button: the stream has not started yet, so it is simply removed from YouTube.</p>
+
+<h2 id="schedule">Schedule a stream</h2>
+<ol>
+  <li>Open the <strong>Scheduled</strong> tab and tap <kbd>+</kbd> in the header (or <kbd>Schedule a stream</kbd> when the list is empty).</li>
+  <li>Enter a <strong>Title</strong> (required) and, if you like, a <strong>Description</strong>. If you allowed location, the description already holds the street address — edit or delete it as you wish.</li>
+  <li>Choose <strong>Who can watch</strong>:
+    <ul>
+      <li><em>Unlisted</em> (default) — only people with the link or with access to the channel;</li>
+      <li><em>Private</em> — only you and accounts you invite on YouTube;</li>
+      <li><em>Public</em> — anyone on YouTube; the app asks you to confirm.</li>
+    </ul>
+  </li>
+  <li>Set the <strong>Start</strong> time (at least one minute from now) and the <strong>Duration</strong>.</li>
+  <li>Tap <kbd>Save</kbd>. The stream appears on <strong>Scheduled</strong>, and 15 minutes before the start it moves to <strong>Ready</strong>.</li>
+</ol>
+<p><strong>At the start time</strong> the app goes live by itself if it is open. If the app is in the background, you get a <em>Time to go live</em> notification — tap it and the stream starts. You can also start earlier: on the <strong>Ready</strong> tab tap <kbd>GO LIVE FROM CAMERA</kbd> on your stream.</p>
+<p>To change a scheduled stream, tap it. Two of your own streams cannot overlap in time — the app tells you if they do.</p>
+
+<h2 id="from-file">Stream a video file</h2>
+<p>Instead of the camera you can broadcast a video from your phone's library — for example, a recording made earlier.</p>
+<ol>
+  <li><a href="#schedule">Schedule a stream</a> and wait until it appears on the <strong>Ready</strong> tab (15 minutes before its start time).</li>
+  <li>Tap <kbd>GO LIVE FROM FILE</kbd> on it and pick the video.</li>
+  <li>The app connects to YouTube showing the first frame of the video. As soon as the stream is <strong>LIVE</strong>, the video plays from the very beginning.</li>
+  <li>When the video ends, the stream finishes by itself.</li>
 </ol>
 
-<h2>Guides</h2>
-<p>Step-by-step: <a href="guides/#enable-streaming">enabling live streaming on your channel</a>, <a href="guides/#group-channel">creating a shared YouTube channel for your group</a> and <a href="guides/#revoke-access">removing the app's access to your Google Account</a>.</p>
+<h2 id="finish">Finish a stream</h2>
+<ol>
+  <li>Tap the round stop button at the bottom of the camera screen (or <kbd>Finish stream</kbd> on the <strong>Live</strong> tab).</li>
+  <li>The stream stops and is saved on your YouTube channel. A form opens where you can change the <strong>Title</strong>, the <strong>Notes</strong> and the <strong>Thumbnail</strong> (from your library or a new photo). Tap <kbd>Save</kbd>, or just close it — the app picks a frame from the video as the thumbnail.</li>
+  <li>The recording appears on the <strong>Completed</strong> tab a moment later.</li>
+</ol>
+<p>If the connection drops, the app keeps trying for a while; if the video does not get through, YouTube ends the stream and the app tells you.</p>
 
-<h2>Streaming as a group</h2>
-<p>Several people can stream to one channel and watch each other. Set up a YouTube <em>Brand Account</em> channel for the group and add its members as <em>Managers</em> (Google Account → Brand Accounts → Manage permissions). Each member signs in to the app with their own Google account and chooses the group channel on the “Choose your account or a brand account” screen.</p>
-<p>Please add members on <a href="https://myaccount.google.com/brandaccounts">myaccount.google.com/brandaccounts</a>, not through “Permissions” in YouTube Studio — people invited through YouTube Studio cannot use the channel from apps like this one.</p>
+<h2 id="watch">Watch streams and recordings</h2>
+<ul>
+  <li><strong>Your own channel:</strong> tap a stream on the <strong>Live</strong> or <strong>Completed</strong> tab and it plays right in the app. Use the arrow buttons on the sides of the player to move to the previous or the next recording.</li>
+  <li><strong>A group channel:</strong> YouTube does not let apps play group-channel streams inside them, so they open on YouTube. The first time, the app asks where — in a built-in browser or in the YouTube app. You can change this later in the side menu → <kbd>Watch group streams</kbd>.</li>
+</ul>
+<p>When someone in your group goes live, you get a notification — even when the app is in the background (iPhone checks now and then, so it may come a few minutes late). Live video on YouTube runs about 10–30 seconds behind; that is normal.</p>
 
-<h2>Frequently asked questions</h2>
+<h2 id="faq">Questions and problems</h2>
+
+<h3>The app says “Live streaming is not enabled yet”</h3>
+<p>YouTube has not switched on live streaming for the channel yet. Follow <a href="/support/channel/#enable-streaming">Enable live streaming</a>; after the 24-hour wait, just open the app again.</p>
+
+<h3>I don't see the group channel when signing in</h3>
+<p>The group's organizer must invite you as a <em>Manager</em> on the Brand Accounts page, and you must accept the invitation in the e-mail from Google. People added through <em>Permissions</em> in YouTube Studio do not see the channel in apps. See <a href="/support/group/#invite">Invite the members</a>.</p>
 
 <h3>Where are my videos?</h3>
-<p>On your YouTube channel — the app stores nothing on the phone and has no servers of its own. Open YouTube Studio to see, edit or download any recording.</p>
+<p>On your YouTube channel. The app stores nothing on the phone and has no servers of its own. Open the YouTube app or <a href="https://studio.youtube.com">YouTube Studio</a> to watch, share, edit, download or delete any recording.</p>
 
 <h3>Who can see my streams?</h3>
-<p>New streams are <em>unlisted</em>: only people with the link (or with access to the channel) can watch them, and they never appear in search or recommendations. You can choose <em>private</em> or <em>public</em> when scheduling a stream.</p>
-
-<h3>The Live tab shows someone else’s stream — how do I watch it?</h3>
-<p>Tap it. The first time, the app asks whether to open streams in its built-in browser or in the YouTube app; you can change this choice later in Settings. Live video on YouTube runs with a delay of about 10–30 seconds — that is normal.</p>
+<p>New streams are <em>unlisted</em>: only people with the link or with access to the channel can watch them, and they never appear in search or recommendations. You can choose <em>private</em> or <em>public</em> when scheduling a stream.</p>
 
 <h3>A stream did not start at its scheduled time</h3>
-<p>The app starts a stream only on the phone of the person who created it, and only while it is open or after that person taps the “Time to go live” notification. Make sure notifications are allowed for Emdalex Streams in the phone’s Settings and that the phone is not in Low Power Mode (iPhone) or Battery Saver (Android).</p>
+<p>A scheduled stream starts only on the phone of the person who created it, and only while the app is open or after that person taps the <em>Time to go live</em> notification. Make sure notifications are allowed for Emdalex Streams in the phone's Settings and that the phone is not in Low Power Mode (iPhone) or Battery Saver (Android).</p>
 
-<h3>“Could not create the stream” / sign-in problems</h3>
-<p>Live streaming must be enabled on the channel: open <a href="https://studio.youtube.com">YouTube Studio</a> → Go live once; YouTube may ask to verify a phone number and then enables streaming within 24 hours. If sign-in keeps failing, sign out from the app’s side menu and sign in again.</p>
+<h3>My stream is not marked as mine on another phone</h3>
+<p>The app recognizes your streams by an ID it keeps on the phone and adds to the stream description on YouTube. On iPhone the ID travels with your Apple ID (iCloud Keychain), so all your iPhones count as you. On Android each installation has its own ID for now.</p>
+
+<h3>The thumbnail was not saved</h3>
+<p>YouTube allows custom thumbnails only on verified channels — verify yours at <a href="https://www.youtube.com/verify">youtube.com/verify</a>. If YouTube says it received too many thumbnails recently, set it later in YouTube Studio.</p>
 
 <h3>I deleted a stream in the app — is it gone from YouTube?</h3>
 <p>Yes. Deleting a stream removes the broadcast, its recording and its stream key from YouTube. This cannot be undone.</p>
 
-<h3>How do I remove the app’s access to my Google account?</h3>
-<p>Sign out in the side menu, or revoke access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+<h3>Sign-in keeps failing</h3>
+<p>Open the side menu, tap <kbd>Log Out</kbd> and sign in again. Make sure you tick <em>Manage your YouTube account</em> on Google's permission screen.</p>
+
+<h2 id="revoke-access">Remove the app's access to your Google Account</h2>
+<p>When you signed in for the first time, Google asked you to allow Emdalex Streams to manage your YouTube account. You can take that permission away at any time. The app keeps nothing anywhere else, so this is all there is to remove.</p>
+<ol>
+  <li>In the app, open the side menu and tap <kbd>Log Out</kbd>.</li>
+  <li>In a browser go to <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a> and sign in if asked. (From the Google or Gmail app: tap your picture → <kbd>Manage your Google Account</kbd> → <kbd>Security</kbd> → <kbd>Your connections to third-party apps &amp; services</kbd>.)</li>
+  <li>Tap <kbd>Emdalex Streams</kbd> → <kbd>Delete all connections you have with Emdalex Streams</kbd> (on some accounts: <kbd>Remove access</kbd>) → <kbd>Confirm</kbd>.</li>
+</ol>
+<p>The app appears once per Google account, not per channel — removing it disconnects both your own channel and any group channel. Your streams and recordings stay on YouTube. If you sign in again later, Google simply asks for the permission once more.</p>
 
 <h2>Privacy</h2>
 <p>The app collects no data. See the <a href="/privacy-policy/">Privacy Policy</a>.</p>
+
+<footer>
+  <a href="/">Home</a>
+  <a href="/support/">Support</a>
+  <a href="/privacy-policy/">Privacy Policy</a>
+  <a href="mailto:sergey.krotkih@gmail.com">Contact</a>
+</footer>
 
 </body>
 </html>

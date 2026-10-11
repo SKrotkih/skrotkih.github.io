@@ -3,11 +3,19 @@
 <head>
 <meta charset="utf-8">
 <title>Emdalex Streams — Support</title>
-<link rel="canonical" href="https://emdalex.com/support/guides/">
-<meta http-equiv="refresh" content="0; url=/support/guides/">
-<script>location.replace("/support/guides/" + location.hash);</script>
+<meta name="robots" content="noindex">
+<script>
+  // Old guide anchors → the new support pages.
+  var map = {
+    "#enable-streaming": "/support/channel/#enable-streaming",
+    "#group-channel": "/support/group/",
+    "#revoke-access": "/support/#revoke-access"
+  };
+  location.replace(map[location.hash] || "/support/");
+</script>
+<meta http-equiv="refresh" content="1; url=/support/">
 </head>
 <body>
-<p>This page has moved to <a href="/support/guides/">emdalex.com/support/guides/</a>.</p>
+<p>The guides have moved: <a href="/support/">Using the app</a>, <a href="/support/channel/">Your own YouTube channel</a>, <a href="/support/group/">A channel for your group</a>.</p>
 </body>
 </html>

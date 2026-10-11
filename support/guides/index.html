@@ -2,127 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Emdalex Streams — Guides</title>
-<style>
-  :root { color-scheme: light dark; }
-  body { font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-         max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
-  h1 { font-size: 30px; margin-bottom: 4px; }
-  h2 { font-size: 23px; margin-top: 44px; padding-top: 20px; border-top: 1px solid rgba(128,128,128,.35); }
-  h3 { font-size: 17px; margin-top: 26px; }
-  .meta { opacity: .7; margin-top: 0; }
-  a { color: #B3261E; }
-  ol { padding-left: 22px; }
-  li { margin: 8px 0; }
-  .note { padding: 12px 16px; border-left: 4px solid #B3261E; background: rgba(179,38,30,.07); border-radius: 6px; margin: 16px 0; }
-  kbd { font: inherit; font-weight: 600; }
-  nav a { margin-right: 18px; }
-</style>
+<title>Emdalex Streams — Support</title>
+<meta name="robots" content="noindex">
+<script>
+  // Old guide anchors → the new support pages.
+  var map = {
+    "#enable-streaming": "/support/channel/#enable-streaming",
+    "#group-channel": "/support/group/",
+    "#revoke-access": "/support/#revoke-access"
+  };
+  location.replace(map[location.hash] || "/support/");
+</script>
+<meta http-equiv="refresh" content="1; url=/support/">
 </head>
 <body>
-
-<h1>Emdalex Streams — Guides</h1>
-<p class="meta">Things you do outside the app: enabling live streaming on your channel, setting up a shared channel for your group, and taking the app's access away from your Google Account when you no longer need it.</p>
-<nav>
-  <a href="#enable-streaming">Enable live streaming</a>
-  <a href="#group-channel">Create a group channel</a>
-  <a href="#revoke-access">Remove the app's access</a>
-</nav>
-
-<h2 id="enable-streaming">1. Enable live streaming on your channel</h2>
-
-<p>Every YouTube channel starts with live streaming switched off. Until you switch it on, Emdalex Streams cannot create streams for the channel — the app shows <em>“Live streaming is not enabled yet”</em> and brings you here. This is a one-time step for each channel (your own, or a group channel), done on the YouTube website.</p>
-
-<div class="note">
-  You need a YouTube channel on the Google account you sign in with. If you have never used YouTube with this account, the first visit to <a href="https://studio.youtube.com">YouTube Studio</a> creates the channel for you — just confirm the name.
-</div>
-
-<h3>Steps</h3>
-<ol>
-  <li>On a computer or in the phone's browser, sign in to YouTube with the same Google account you use in the app. If you stream to a group channel, switch to that channel first: click your picture (top right) → <kbd>Switch account</kbd> → the channel.</li>
-  <li>Open <a href="https://studio.youtube.com">studio.youtube.com</a>.</li>
-  <li>Click <kbd>Create</kbd> (top right, the camera icon) → <kbd>Go live</kbd>. On a phone: tap <kbd>Create</kbd> → <kbd>Go live</kbd> in the YouTube app.</li>
-  <li>YouTube asks you to verify a phone number: enter it, then the code from the SMS. This proves the channel belongs to a real person; the number is not shown anywhere.</li>
-  <li>After verification YouTube shows a countdown — <em>“Only 23:59 until you can stream”</em>. Live streaming becomes available on the channel within 24 hours. You can close the page; there is nothing else to do.</li>
-</ol>
-
-<h3>After the wait</h3>
-<p>Open Emdalex Streams again and press <kbd>Stream</kbd> or schedule a stream — it now works. No need to sign out or reinstall.</p>
-
-<h3>If it still does not work after 24 hours</h3>
-<ol>
-  <li>Check that you signed in to the app with the <em>same channel</em> you enabled streaming for: the side menu shows the channel name at the top.</li>
-  <li>Open <a href="https://studio.youtube.com">YouTube Studio</a> → <kbd>Go live</kbd> once more: if you see the Live Control Room instead of a countdown, streaming is enabled. If YouTube shows a restriction notice instead, the channel has a strike or is not in good standing — the notice explains what to do.</li>
-  <li>Channels must meet YouTube's live-streaming rules: no live-streaming restrictions in the past 90 days, and the account holder must be at least 18 (or 13 with a verified parent).</li>
-</ol>
-
-<h2 id="group-channel">2. Create a YouTube channel for your group</h2>
-
-
-
-<p>A group (a family, a team, a class) streams to one shared YouTube channel. Each member signs in to Emdalex Streams with their <em>own</em> Google account and simply picks the group channel — nobody shares a password. The channel is a YouTube <em>Brand Account</em>; the person who creates it is its owner and can add and remove members at any time.</p>
-
-<p>Do this once, on a computer, in a web browser. It takes about ten minutes, plus a one-time wait of up to 24 hours before YouTube allows the new channel to stream.</p>
-
-<h3>Step 1 — Create the channel</h3>
-<ol>
-  <li>Go to <a href="https://www.youtube.com">youtube.com</a> and sign in with the Google account that will own the group channel (yours, if you are the coach or the parent).</li>
-  <li>Open <a href="https://www.youtube.com/channel_switcher">youtube.com/channel_switcher</a>. You will see your existing channel and a tile with a plus sign.</li>
-  <li>Click <kbd>Create a channel</kbd>, enter the group's name (for example <em>Smith Family</em> or <em>Tuesday Swim Group</em>) and click <kbd>Create</kbd>. You can leave the picture and the handle as they are.</li>
-</ol>
-
-<h3>Step 2 — Enable live streaming on the channel</h3>
-<p>While the new channel is selected, follow <a href="#enable-streaming">chapter 1</a>: YouTube Studio → <kbd>Go live</kbd>, phone verification, then up to 24 hours before the channel can stream. Until then the app cannot create streams on this channel.</p>
-
-<h3>Step 3 — Make sure members are managed through Google Account</h3>
-<div class="note">
-  YouTube has two ways to give people access to a channel. Only one of them works with apps like Emdalex Streams: <strong>Brand Account managers</strong>, added on <a href="https://myaccount.google.com/brandaccounts">myaccount.google.com/brandaccounts</a>. People invited through <em>YouTube Studio → Settings → Permissions</em> can use the channel on the YouTube website only, not from the app.
-</div>
-<ol>
-  <li>Open <a href="https://myaccount.google.com/brandaccounts">myaccount.google.com/brandaccounts</a> and click the group channel.</li>
-  <li>If you see a <kbd>Manage Permissions</kbd> button under <em>Users</em>, go to Step 4.</li>
-  <li>If there is no such button, the channel was created on the newer permissions system. Switch it back: open <a href="https://studio.youtube.com">studio.youtube.com</a> → <kbd>Settings</kbd> (bottom left) → <kbd>Permissions</kbd> → <kbd>Opt out of permissions in YouTube Studio</kbd> and confirm. Reload the Brand Accounts page — <kbd>Manage Permissions</kbd> is now there.</li>
-</ol>
-
-<h3>Step 4 — Invite the members</h3>
-<ol>
-  <li>On the channel's Brand Account page click <kbd>Manage Permissions</kbd>.</li>
-  <li>Click the invite icon (a person with a plus sign), enter the member's Google e-mail address and choose the role <kbd>Manager</kbd>. Repeat for each member, then click <kbd>Invite</kbd>.</li>
-  <li>Each member receives an e-mail from Google and must click <kbd>Accept</kbd> in it. Until they do, the channel does not appear for them in the app.</li>
-</ol>
-<p><strong>Roles.</strong> A <em>Manager</em> can stream, watch and delete streams — the right role for members. An <em>Owner</em> can also add and remove people; give it only to a second adult you trust. To remove someone later, open the same page and click the cross next to their name.</p>
-
-<h3>Step 5 — Sign in on the phones</h3>
-<ol>
-  <li>On each phone, open Emdalex Streams. If the app is already signed in to a personal channel, open the side menu and tap <kbd>Log Out</kbd>.</li>
-  <li>Tap <kbd>Sign in with Google</kbd> and choose your own account.</li>
-  <li>On the next screen, <em>Choose your account or a brand account</em>, tap the <strong>group channel</strong>, not your personal profile.</li>
-</ol>
-<p>Everyone who signs in this way sees the same lists: what is scheduled, who is on air (the <em>Live</em> tab) and all recordings. Streams are <em>unlisted</em> by default, so only people with the link — in practice, the group — can watch them.</p>
-
-<h2 id="revoke-access">3. Remove Emdalex Streams's access to your Google Account</h2>
-
-<p>When you signed in for the first time, Google asked you to allow Emdalex Streams to manage your YouTube account. If you stop using the app — or simply want to tidy up your account — you can take that permission away. The app keeps nothing anywhere else, so this is all there is to remove.</p>
-
-<h3>On your phone</h3>
-<ol>
-  <li>Open a browser (Safari or Chrome) and go to <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>. Sign in if asked. (The same page is reachable from the Google or Gmail app: tap your picture → <kbd>Manage your Google Account</kbd> → <kbd>Security</kbd> → <kbd>Your connections to third-party apps &amp; services</kbd>.)</li>
-  <li>In the list of connected apps, tap <kbd>Emdalex Streams</kbd>.</li>
-  <li>Tap <kbd>Delete all connections you have with Emdalex Streams</kbd> (on some accounts the button reads <kbd>Remove access</kbd>), then <kbd>Confirm</kbd>.</li>
-</ol>
-<p>If you use a group channel, the app appears once per Google account, not per channel — removing it disconnects both your personal channel and the group channel.</p>
-
-<h3>Then, in the app</h3>
-<ol>
-  <li>Open the side menu and tap <kbd>Log Out</kbd>. This removes the saved sign-in from the phone.</li>
-  <li>To also remove the name you entered and your settings, delete the app: press and hold its icon → <kbd>Remove App</kbd> → <kbd>Delete App</kbd>.</li>
-</ol>
-
-<h3>What is not affected</h3>
-<p>Your streams and recordings stay on YouTube — they belong to your channel, not to the app. Manage or delete them in <a href="https://studio.youtube.com">YouTube Studio</a> at any time. If you later sign in to Emdalex Streams again, Google will simply ask for the permission once more.</p>
-
-<p style="margin-top:40px"><a href="../">← Support</a></p>
-
+<p>The guides have moved: <a href="/support/">Using the app</a>, <a href="/support/channel/">Your own YouTube channel</a>, <a href="/support/group/">A channel for your group</a>.</p>
 </body>
 </html>
