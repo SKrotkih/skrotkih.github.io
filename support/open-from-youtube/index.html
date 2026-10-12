@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emdalex Streams — Open a stream from YouTube</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+         max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 30px; margin-bottom: 4px; }
+  h2 { font-size: 23px; margin-top: 44px; padding-top: 20px; border-top: 1px solid rgba(128,128,128,.35); }
+  h3 { font-size: 17px; margin-top: 26px; }
+  .meta { opacity: .7; margin-top: 0; }
+  a { color: #B3261E; }
+  ol, ul { padding-left: 22px; }
+  li { margin: 8px 0; }
+  .note { padding: 12px 16px; border-left: 4px solid #B3261E; background: rgba(179,38,30,.07); border-radius: 6px; margin: 16px 0; }
+  .contact { padding: 16px 20px; border: 1px solid rgba(128,128,128,.35); border-radius: 12px; margin-top: 12px; }
+  code { font: 15px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  pre { overflow-x: auto; padding: 12px 14px; background: rgba(128,128,128,.12); border-radius: 8px; }
+  p code, li code { overflow-wrap: anywhere; }
+  pre code { font-size: 14px; }
+  kbd { font: inherit; font-weight: 600; }
+  .pages { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 16px 0 8px; font-size: 15px; }
+  .pages b { color: inherit; }
+  .toc { font-size: 15px; }
+  .toc li { margin: 4px 0; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid rgba(128,128,128,.35); font-size: 15px; }
+  footer a { margin-right: 18px; }
+</style>
+</head>
+<body>
+
+<p class="meta"><a href="/">Emdalex Streams</a> · Support</p>
+<nav class="pages">
+  <a href="/support/">Using the app</a>
+  <a href="/support/channel/">Your own YouTube channel</a>
+  <a href="/support/group/">A channel for your group</a>
+  <b>Open from YouTube</b>
+</nav>
+
+<h1>Open a stream from YouTube</h1>
+<p>Any link to one of your channel's streams can open <strong>right in Emdalex Streams</strong>: the app switches to the tab the stream is on now — <em>Scheduled</em>, <em>Ready</em>, <em>Live</em> or <em>Completed</em> — scrolls to it and outlines it in red for a moment. Works on iPhone and Android.</p>
+
+<ul class="toc">
+  <li><a href="#why">Why it is useful</a></li>
+  <li><a href="#iphone">On iPhone</a></li>
+  <li><a href="#android">On Android</a></li>
+  <li><a href="#what-happens">What happens in the app</a></li>
+  <li><a href="#links">Which links work</a></li>
+  <li><a href="#developers">For developers: the emdalex:// link</a></li>
+</ul>
+
+<h2 id="why">Why it is useful</h2>
+<ul>
+  <li><strong>A link in the family or team chat.</strong> Someone posts a stream link in WhatsApp, Telegram or Messages. Share it to Emdalex Streams and you see at once whose stream it is, whether it is still scheduled, on air or finished — and, if it is yours, you can edit it, start it or delete it.</li>
+  <li><strong>From YouTube back to the app.</strong> You are watching your channel in the YouTube app and want to change a stream's time, title or thumbnail, or go live with it. One share instead of looking for it in the lists.</li>
+  <li><strong>A link in a reminder or an e-mail.</strong> Keep a link to the next training or lesson in Calendar, Reminders or Notes; when it is time, share it to the app and you are on the stream, ready to go live.</li>
+  <li><strong>Checking the channel.</strong> A stream that is not on the channel you are signed in to is reported as <em>Stream not found</em> — a quick way to see that you are signed in to the wrong channel.</li>
+</ul>
+
+<h2 id="iphone">On iPhone</h2>
+<ol>
+  <li>In the YouTube app open the stream (or a recording) and tap <kbd>Share</kbd>.</li>
+  <li>In the share sheet tap <kbd>Emdalex Streams</kbd>.
+    <br>Not in the row of apps? Scroll the row to the end, tap <kbd>More</kbd> and turn <em>Emdalex Streams</em> on (tap <kbd>Edit</kbd> to move it to <em>Favorites</em> so it is always first).</li>
+  <li>Emdalex Streams opens on that stream.</li>
+</ol>
+<p>The same works from any app that shares a link: Safari, Messages, Mail, WhatsApp, Telegram, Notes.</p>
+
+<h2 id="android">On Android</h2>
+<ol>
+  <li>In the YouTube app open the stream (or a recording) and tap <kbd>Share</kbd>.</li>
+  <li>In the list of apps choose <kbd>Emdalex Streams</kbd>. If it is not shown, tap <kbd>More</kbd> and find it; press and hold it to pin it to the top.</li>
+  <li>Emdalex Streams opens on that stream.</li>
+</ol>
+<p>The same works from Chrome, Gmail, Messages, WhatsApp, Telegram — wherever there is <kbd>Share</kbd> for a link or text.</p>
+
+<h2 id="what-happens">What happens in the app</h2>
+<ul>
+  <li><strong>Signed in to the right channel:</strong> the stream's tab opens, the list scrolls to it and the row is outlined in red for a few seconds. Live streams in progress are found too.</li>
+  <li><strong>Not signed in:</strong> the app shows the usual sign-in; once you are in and the lists are loaded, it takes you to the stream.</li>
+  <li><strong>The stream is on another channel:</strong> the app shows <em>Stream not found</em>. Check which channel you are signed in to (top of the side menu); to switch, tap <kbd>Log Out</kbd> and <a href="/support/#sign-in">sign in</a> choosing the other channel.</li>
+  <li><strong>Not a YouTube video link:</strong> nothing opens; the app says it needs a stream or a video from YouTube.</li>
+</ul>
+<div class="note">Only streams of the channel you are signed in to can be opened — the app shows your channel, not YouTube in general. To simply watch somebody else's video, use the YouTube app.</div>
+
+<h2 id="links">Which links work</h2>
+<p>All the usual forms of a YouTube video link — the app picks the 11-character video ID out of it:</p>
+<ul>
+  <li><code>https://youtu.be/VIDEO_ID</code> (what the YouTube app shares, with or without <code>?si=…</code>)</li>
+  <li><code>https://www.youtube.com/watch?v=VIDEO_ID</code></li>
+  <li><code>https://www.youtube.com/live/VIDEO_ID</code></li>
+  <li><code>https://www.youtube.com/shorts/VIDEO_ID</code>, <code>/embed/VIDEO_ID</code>; <code>m.youtube.com</code> too</li>
+</ul>
+<p>A link inside a longer text (“Join us tonight: https://youtu.be/…”) works as well.</p>
+
+<h2 id="developers">For developers: the emdalex:// link</h2>
+<p>Emdalex Streams registers its own link that opens a stream directly, without the share sheet:</p>
+<p><code>emdalex://open?v=VIDEO_ID</code></p>
+<p>Use it from your own app, a web page, a QR code, an automation or a notification — for example, a club or school app that schedules streams through the YouTube API and lets its users jump to a stream in Emdalex Streams to go live with it. The behavior is the same as with sharing: the right tab, the row outlined, sign-in first if needed, <em>Stream not found</em> for another channel.</p>
+
+<h3>iOS (Swift)</h3>
+<pre><code>let url = URL(string: "emdalex://open?v=\(videoID)")!
+if UIApplication.shared.canOpenURL(url) {
+    UIApplication.shared.open(url)
+} else {
+    // Emdalex Streams is not installed: open the stream in YouTube
+    UIApplication.shared.open(URL(string: "https://youtu.be/\(videoID)")!)
+}</code></pre>
+<p>For <code>canOpenURL</code> add <code>emdalex</code> to <code>LSApplicationQueriesSchemes</code> in your <code>Info.plist</code>. In the Shortcuts app, the <em>Open URLs</em> action with the same link does the job without code.</p>
+
+<h3>Android (Kotlin)</h3>
+<pre><code>val intent = Intent(Intent.ACTION_VIEW, Uri.parse("emdalex://open?v=$videoId"))
+try {
+    startActivity(intent)
+} catch (e: ActivityNotFoundException) {
+    // Emdalex Streams is not installed: open the stream in YouTube
+    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/$videoId")))
+}</code></pre>
+<p>On Android 11 and later, to check for the app in advance, declare it in your manifest: <code>&lt;queries&gt;&lt;package android:name="com.skdev.emdalex" /&gt;&lt;/queries&gt;</code>. You can also send the YouTube link as text with <code>Intent.ACTION_SEND</code> to the package <code>com.skdev.emdalex</code>.</p>
+
+<h3>Web page or QR code</h3>
+<pre><code>&lt;a href="emdalex://open?v=VIDEO_ID"&gt;Open in Emdalex Streams&lt;/a&gt;</code></pre>
+<p>A tap on such a link opens the app on a phone where it is installed; the browser may ask to confirm. Where it is not installed nothing happens, so put an ordinary YouTube link next to it.</p>
+<p><strong>The rules:</strong> <code>VIDEO_ID</code> is the 11-character YouTube video ID (letters, digits, <code>-</code> and <code>_</code>). The link only opens the app on the stream — it never starts, changes or deletes anything by itself.</p>
+
+<footer>
+  <a href="/">Home</a>
+  <a href="/support/">Support</a>
+  <a href="/privacy-policy/">Privacy Policy</a>
+  <a href="mailto:sergey.krotkih@gmail.com">Contact</a>
+</footer>
+
+</body>
+</html>
