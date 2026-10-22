@@ -53,6 +53,7 @@
   <li><a href="#screen">The main screen</a></li>
   <li><a href="#go-live">Go live right now</a></li>
   <li><a href="#schedule">Schedule a stream</a></li>
+  <li><a href="#stream-form">The stream form, field by field</a></li>
   <li><a href="#from-file">Stream a video file</a></li>
   <li><a href="#finish">Finish a stream</a></li>
   <li><a href="#watch">Watch streams and recordings</a></li>
@@ -143,6 +144,36 @@
 </ol>
 <p><strong>At the start time</strong> the app goes live by itself if it is open. If the app is in the background, you get a <em>Time to go live</em> notification — tap it and the stream starts. You can also start earlier: on the <strong>Ready</strong> tab tap <kbd>GO LIVE FROM CAMERA</kbd> on your stream.</p>
 <p>To change a scheduled stream, tap it. Two of your own streams cannot overlap in time — the app tells you if they do.</p>
+
+<h2 id="stream-form">The stream form, field by field</h2>
+<p>The <em>New stream</em> and <em>Edit stream</em> screens. The <kbd>i</kbd> button at the top of the form opens this section.</p>
+<dl>
+  <dt><strong>Title</strong> — required</dt>
+  <dd>The name viewers see on YouTube. Up to 100 characters; the signs <code>&lt;</code> and <code>&gt;</code> are not allowed. While it is empty the field is outlined in red and <kbd>Save</kbd> stays off.</dd>
+  <dt><strong>Description</strong> — optional</dt>
+  <dd>Shown under the video on YouTube and in the app's lists. If you allowed location, the app fills in the street address where you are — keep it, change it or delete it. On YouTube you will also see a last line starting with <code>emdalex:</code> — it marks the stream as yours in the app; please leave it.</dd>
+  <dt><strong>Who can watch</strong></dt>
+  <dd><em>Unlisted</em> (default) — only people with the link or with access to the channel; <em>Private</em> — only you and the accounts you invite on YouTube; <em>Public</em> — anyone on YouTube, in search and on your channel. Choosing <em>Public</em> asks you to confirm.</dd>
+  <dt><strong>Start at a scheduled time?</strong></dt>
+  <dd>On: the stream is planned for the <strong>Start</strong> date and time below — at least one minute from now. Off: it starts as soon as you press <kbd>Stream</kbd>.</dd>
+  <dt><strong>Duration</strong></dt>
+  <dd>How long the stream is planned for: from 3 to 90 minutes, or <em>Unlimited</em> (default). The app stops any stream after 90 minutes on air. Two of your own streams cannot overlap; an Unlimited one counts as 90 minutes.</dd>
+  <dt><strong>Advanced settings</strong> — you rarely need them</dt>
+  <dd>
+    <ul>
+      <li><strong>Viewer delay</strong> — how far viewers are behind you: <em>Normal</em> (15–30 s, best quality), <em>Low</em> (5–10 s, default), <em>Ultra low</em> (2–5 s, up to 1080p, no rewinding).</li>
+      <li><strong>Is it child-directed?</strong> — turn on if the stream is made for children; YouTube then limits comments and ads.</li>
+      <li><strong>Start / stop automatically</strong> — YouTube goes live when the video arrives and ends the stream about a minute after it stops. Keep both on.</li>
+      <li><strong>Closed captions</strong> — only if you send captions from separate software.</li>
+      <li><strong>DVR</strong> — viewers can pause and rewind during the stream.</li>
+      <li><strong>Embedded player</strong> — the stream may play inside other apps and websites. Group (Brand) channels often may not; the app handles that by itself.</li>
+      <li><strong>Record automatically</strong> — keep on: the recording is what you find on the <strong>Completed</strong> tab.</li>
+      <li><strong>Monitor stream</strong> — a private preview for you in YouTube Studio; usually not needed.</li>
+      <li><strong>Reuse this stream key</strong> — for external encoders; leave off.</li>
+    </ul>
+  </dd>
+</dl>
+<p>Then tap <kbd>Save</kbd>. If the time overlaps another of your streams, the app tells you which one.</p>
 
 <h2 id="from-file">Stream a video file</h2>
 <p>Instead of the camera you can broadcast a video from your phone's library — for example, a recording made earlier.</p>
