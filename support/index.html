@@ -54,7 +54,8 @@
   <li><a href="#go-live">Go live right now</a></li>
   <li><a href="#schedule">Schedule a stream</a></li>
   <li><a href="#stream-form">The stream form, field by field</a></li>
-  <li><a href="#from-file">Stream a video file</a></li>
+  <li><a href="#pause">Pause a stream</a></li>
+  <li><a href="#from-file">Stream videos from your library</a></li>
   <li><a href="#finish">Finish a stream</a></li>
   <li><a href="#watch">Watch streams and recordings</a></li>
   <li><a href="#faq">Questions and problems</a></li>
@@ -115,18 +116,21 @@
   <li><strong>Live</strong> — streams on air right now, from this phone or any other phone signed in to the same channel.</li>
   <li><strong>Completed</strong> — finished streams. Their recordings are on YouTube; search them by title or sort by date.</li>
 </ul>
-<p>Your own streams are marked with a <strong>green dot</strong>. Only you can start, edit, finish or delete them; on a group channel you see the others' streams too, but cannot change them. To delete one of your streams, swipe its row to the left.</p>
-<p>The side menu (<kbd>☰</kbd>) has <kbd>Quick Start</kbd> (the introduction again), <kbd>Open the guide</kbd> (this page), <kbd>Watch group streams</kbd> (settings) and <kbd>Log Out</kbd>.</p>
+<p>Your own streams are marked with a <strong>dot</strong> before the title: green for public, blue for unlisted, red for private. Only you can start, edit, finish or delete them; on a group channel you see the others' streams too, but cannot change them. To delete one of your streams, swipe its row to the left.</p>
+<p>The side menu (<kbd>☰</kbd>) has <kbd>Quick Start</kbd> (the introduction again), <kbd>Open the guide</kbd> (this page), <kbd>Settings</kbd> (where group streams play, the frame rate of camera streams) and <kbd>Log Out</kbd>.</p>
 
 <h2 id="go-live">Go live right now</h2>
 <ol>
   <li>Hold the phone the way you want the video to look — upright or sideways. The orientation is fixed when the stream starts and stays the same until the end.</li>
   <li>Tap the round red <kbd>▶</kbd> button above the tabs. The first time, allow access to the camera, microphone and (optionally) location.</li>
-  <li>The camera screen opens. The label at the bottom shows what is happening: <em>Preparing</em> → <em>Connecting</em> → <em>Sending video…</em> → <strong>LIVE</strong>. Going live usually takes 10–30 seconds — YouTube needs that time to receive the first video.</li>
-  <li>When the label turns to <strong>LIVE</strong>, the phone plays a short chime: you are on air.</li>
+  <li>The camera screen opens. While the stream gets ready, a ring turns at the bottom and the label says <em>Preparing</em>, then <em>Connecting</em>. Going live usually takes 10–30 seconds — YouTube needs that time to receive the first video.</li>
+  <li>When you are on air, the ring gives way to the round stop button, the red timer starts at the top and the label says <em>You're live. Tap ■ to end the stream.</em> The app makes no sound — nothing leaks into the stream.</li>
 </ol>
 <p>The stream is titled <em>Emdalex Streams</em>; if you allowed location, its description holds the street address. You can change both when you finish.</p>
-<p>Changed your mind before <strong>LIVE</strong>? Tap <kbd>Back</kbd> or the stop button: the stream has not started yet, so it is simply removed from YouTube.</p>
+<p>Changed your mind before you are on air? Tap <kbd>Cancel</kbd> (or <kbd>Back</kbd>): the stream has not started yet, so it is simply removed from YouTube.</p>
+
+<h2 id="pause">Pause a stream</h2>
+<p>YouTube has no pause, so the app makes one. On air, tap <kbd>Pause</kbd> at the top right: viewers see a black screen saying <em>Paused — back soon</em> and hear nothing; the camera and the microphone are off. The stream itself goes on — the timer keeps counting, and the 90-minute limit too. Tap <kbd>Resume</kbd> and the camera is back in the same stream; the recording on YouTube is one video with the pause in it. To end the stream, resume first. Pause works for camera streams.</p>
 
 <h2 id="schedule">Schedule a stream</h2>
 <ol>
@@ -175,19 +179,20 @@
 </dl>
 <p>Then tap <kbd>Save</kbd>. If the time overlaps another of your streams, the app tells you which one.</p>
 
-<h2 id="from-file">Stream a video file</h2>
-<p>Instead of the camera you can broadcast a video from your phone's library — for example, a recording made earlier.</p>
+<h2 id="from-file">Stream videos from your library</h2>
+<p>Instead of the camera you can broadcast videos from your phone's library — for example, recordings made earlier.</p>
 <ol>
-  <li><a href="#schedule">Schedule a stream</a> and wait until it appears on the <strong>Ready</strong> tab (15 minutes before its start time).</li>
-  <li>Tap <kbd>GO LIVE FROM FILE</kbd> on it and pick the video.</li>
-  <li>The app connects to YouTube showing the first frame of the video. As soon as the stream is <strong>LIVE</strong>, the video plays from the very beginning.</li>
-  <li>When the video ends, the stream finishes by itself.</li>
+  <li>Tap the round red <kbd>▶</kbd> button above the tabs and choose <kbd>Video file</kbd> (or, for a scheduled stream on the <strong>Ready</strong> tab, <kbd>⋯</kbd> → <kbd>Go live from a video file</kbd>).</li>
+  <li>Pick one video or several. They play in the order you picked them.</li>
+  <li>The app connects to YouTube showing the first frame of the first video. As soon as you are on air, the videos play from the very beginning, one after another, with 3 seconds of black screen between them.</li>
+  <li>When the last video ends, the stream finishes by itself.</li>
 </ol>
+<p>The first video sets the shape of the stream (upright or sideways); videos of another shape are shown with black bars. A stream runs at most 90 minutes, so the app takes the videos in order while they fit — one long video is always taken (the stream simply stops at 90 minutes); the rest are left out and the app tells you. On Android a video whose sound is recorded differently from the first one's plays without sound — the app tells you that too.</p>
 
 <h2 id="finish">Finish a stream</h2>
 <ol>
   <li>Tap the round stop button at the bottom of the camera screen (or <kbd>Finish stream</kbd> on the <strong>Live</strong> tab).</li>
-  <li>The stream stops and is saved on your YouTube channel. A form opens where you can change the <strong>Title</strong>, the <strong>Notes</strong> and the <strong>Thumbnail</strong> (from your library or a new photo). Tap <kbd>Save</kbd>, or just close it — the app picks a frame from the video as the thumbnail.</li>
+  <li>The stream stops and is saved on your YouTube channel. A form opens where you can change the <strong>Title</strong>, the <strong>Notes</strong> and the <strong>Thumbnail</strong> (from your library or a new photo). Tap <kbd>Done</kbd> — your changes are saved; leave the thumbnail as it is and the app picks a frame from the video. The form also closes by itself after a minute.</li>
   <li>The recording appears on the <strong>Completed</strong> tab a moment later.</li>
 </ol>
 <p>If the connection drops, the app keeps trying for a while; if the video does not get through, YouTube ends the stream and the app tells you.</p>
@@ -195,7 +200,7 @@
 <h2 id="watch">Watch streams and recordings</h2>
 <ul>
   <li><strong>Your own channel:</strong> tap a stream on the <strong>Live</strong> or <strong>Completed</strong> tab and it plays right in the app. Use the arrow buttons on the sides of the player to move to the previous or the next recording.</li>
-  <li><strong>A group channel:</strong> YouTube does not let apps play group-channel streams inside them, so they open on YouTube. The first time, the app asks where — in a built-in browser or in the YouTube app. You can change this later in the side menu → <kbd>Watch group streams</kbd>.</li>
+  <li><strong>A group channel:</strong> YouTube does not let apps play group-channel streams inside them, so they open on YouTube. The first time, the app asks where — in a built-in browser or in the YouTube app. You can change this later in the side menu → <kbd>Settings</kbd> → <em>Watch group streams</em>.</li>
 </ul>
 <p>When someone in your group goes live, you get a notification — even when the app is in the background (iPhone checks now and then, so it may come a few minutes late). Live video on YouTube runs about 10–30 seconds behind; that is normal.</p>
 
@@ -215,6 +220,9 @@
 
 <h3>I don't see the group channel when signing in</h3>
 <p>The group's organizer must invite you as a <em>Manager</em> on the Brand Accounts page, and you must accept the invitation in the e-mail from Google. People added through <em>Permissions</em> in YouTube Studio do not see the channel in apps. See <a href="/support/group/#invite">Invite the members</a>.</p>
+
+<h3>My phone is full — can I film with the app instead?</h3>
+<p>Yes: go live, and the video goes straight to your own YouTube channel — nothing is stored on the phone. Keep in mind that it is a live stream: it needs an internet connection, and the recording has the stream's quality (up to 720p; lower on a weak connection), not your camera's full quality. Your channel also needs live streaming switched on beforehand (<a href="/support/channel/#enable-streaming">once, up to 24 hours</a>) — set it up before the day you need it.</p>
 
 <h3>Where are my videos?</h3>
 <p>On your YouTube channel. The app stores nothing on the phone and has no servers of its own. Open the YouTube app or <a href="https://studio.youtube.com">YouTube Studio</a> to watch, share, edit, download or delete any recording.</p>
@@ -239,8 +247,8 @@
 
 <h3>Sign-in keeps failing</h3>
 <p>Open the side menu, tap <kbd>Log Out</kbd> and sign in again. On Google's permission screen make sure the box next to <em>See, edit, and permanently delete your YouTube videos…</em> is ticked — see <a href="#sign-in">Sign in</a>, step 5.</p>
-<h3>The app says my Google sign-in has ended</h3>
-<p>The app's access was removed — for example on <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a> or after a password change. Tap <kbd>Sign in with Google</kbd> and go through the steps again. A lost internet connection never signs you out.</p>
+<h3>The app opened on the sign-in screen by itself</h3>
+<p>Google no longer accepts the app's access — for example it was removed on <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>, or after a password change. Tap <kbd>Sign in with Google</kbd> and go through the steps again. A lost internet connection never signs you out.</p>
 
 <h2 id="revoke-access">Remove the app's access to your Google Account</h2>
 <p>When you signed in, Google asked you to allow Emdalex Streams to access your YouTube account. You can take that permission away at any time. The app keeps nothing anywhere else, so this is all there is to remove.</p>
