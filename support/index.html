@@ -58,6 +58,7 @@
   <li><a href="#from-file">Stream videos from your library</a></li>
   <li><a href="#finish">Finish a stream</a></li>
   <li><a href="#watch">Watch streams and recordings</a></li>
+  <li><a href="#limits">Limits on streaming</a></li>
   <li><a href="#faq">Questions and problems</a></li>
   <li><a href="#revoke-access">Remove the app's access to your Google Account</a></li>
 </ul>
@@ -203,6 +204,59 @@
   <li><strong>A group channel:</strong> YouTube does not let apps play group-channel streams inside them, so they open on YouTube. The first time, the app asks where — in a built-in browser or in the YouTube app. You can change this later in the side menu → <kbd>Settings</kbd> → <em>Watch group streams</em>.</li>
 </ul>
 <p>When someone in your group goes live, you get a notification — even when the app is in the background (iPhone checks now and then, so it may come a few minutes late). Live video on YouTube runs about 10–30 seconds behind; that is normal.</p>
+
+<h2 id="limits">Limits on streaming</h2>
+<p>Two kinds of limits apply to every stream: the app's own (quality, length, scheduling) and YouTube's, which belong to the <em>channel</em>. In a group all members stream to one channel, so YouTube's limits — and penalties — are shared by the whole group.</p>
+
+<h3 id="limits-app">The app's limits</h3>
+<ul>
+  <li><strong>Picture from the camera:</strong> 720p — 1280×720 sideways or 720×1280 upright — at 30 frames per second, up to 2.5 Mbit/s. On a weak connection the app lowers the quality instead of dropping the stream; on a hot phone it lowers it too (to 1.5 or 1 Mbit/s) until the phone cools down.</li>
+  <li><strong>Sound:</strong> stereo AAC, 128 kbit/s.</li>
+  <li><strong>Videos from your library:</strong> streamed at most at 720p (the longer side at most 1280 pixels) and 30 frames per second, whatever their own quality — a 4K video is scaled down. The first video sets the shape of the stream.</li>
+  <li><strong>Length:</strong> at most 90 minutes on air per stream, a pause included. The recording stays on YouTube when the app stops the stream.</li>
+  <li><strong>Orientation:</strong> a camera stream keeps the orientation it started with until the end.</li>
+  <li><strong>Scheduling:</strong> at least one minute ahead; two of your own streams cannot overlap (an Unlimited stream counts as 90 minutes). A stream reaches Ready 15 minutes before its start.</li>
+  <li><strong>Title:</strong> up to 100 characters, without &lt; and &gt;.</li>
+  <li><strong>Leaving the app:</strong> the stream needs the app on screen. If the connection drops, the app keeps reconnecting for up to 45 seconds. On Android, answering a call or switching to another app stops the stream (the recording up to that moment is kept); on iPhone a phone call only pauses the picture and sound.</li>
+  <li><strong>The app's daily request limit:</strong> YouTube gives the app a fixed number of requests per day, shared by all its users. If it runs out, a new stream cannot start until the limit resets at midnight Pacific time (about 10:00 in Kyiv) — the app shows the exact time. A stream already on air goes on.</li>
+</ul>
+
+<h3 id="limits-youtube">YouTube's limits on a channel</h3>
+<ul>
+  <li><strong>Live streaming must be on.</strong> The channel has to be verified, without live streaming restrictions in the past 90 days, and the person streaming must be at least 16 (younger only with an adult visibly present). The first switch-on can take up to 24 hours.</li>
+  <li><strong>New live streams per day.</strong> YouTube limits how many live streams a channel can create in 24 hours; it does not publish the number. Every stream counts — also one cancelled before it went live — and in a group everyone's streams count together. When the limit is reached, wait 24 hours.</li>
+  <li><strong>Streams at the same time.</strong> At most 10 active streams per channel. The app gives every stream its own stream key, so the per-key limit (3) does not matter.</li>
+  <li><strong>Recordings.</strong> YouTube keeps a recording automatically if the stream is shorter than 12 hours — always the case with the app's 90 minutes.</li>
+  <li><strong>Custom thumbnails</strong> need a verified channel and have a daily limit; when it is reached, set the thumbnail later in YouTube Studio.</li>
+  <li><strong>Playing group streams inside apps</strong> (embedding) is an advanced YouTube feature; without it group streams open on YouTube.</li>
+</ul>
+
+<h3 id="limits-raise">What gives a channel higher limits</h3>
+<p>YouTube has three levels of features. You can see yours in YouTube Studio → Settings → Channel → Feature eligibility.</p>
+<ul>
+  <li><strong>Standard</strong> — any channel without active strikes: live streaming, custom thumbnails, each with a small daily limit.</li>
+  <li><strong>Intermediate</strong> — after a phone verification: higher daily limits for live streams and thumbnails.</li>
+  <li><strong>Advanced</strong> — after enough channel history (often granted automatically) or a verification with an ID or a video: higher limits still, and live streams may be embedded. Keep following YouTube's rules to keep it.</li>
+</ul>
+<p>For a group channel the verification is done by its owner in the channel's settings.</p>
+
+<h3 id="limits-penalties">What makes the limits stricter</h3>
+<ul>
+  <li><strong>Community Guidelines.</strong> The first violation is usually a warning. A strike blocks uploads and live streams, scheduled ones included, for one week; a second strike within 90 days blocks them for two weeks; a third within 90 days may remove the channel. Each strike expires after 90 days; deleting the video does not remove it. A strike for a restricted live stream blocks live streaming for 14 days.</li>
+  <li><strong>Copyright.</strong> YouTube scans every live stream, including streams of library videos. Music, TV or someone else's stream in the background can replace your picture with a placeholder, interrupt the stream or end it — sometimes even with licensed music.</li>
+  <li><strong>Minors.</strong> A stream with children under 16 and no adult in the picture may be removed or lose its chat, and the channel may temporarily lose live streaming.</li>
+  <li><strong>In a group, one member's violation restricts the channel for everyone.</strong> Agree on the rules within the group.</li>
+</ul>
+
+<h3 id="limits-around">What you can do</h3>
+<ul>
+  <li><strong>Longer than 90 minutes:</strong> finish the stream and start a new one — you get two recordings.</li>
+  <li><strong>Daily limit of new streams:</strong> avoid test starts you cancel; verify the channel's phone number to reach the intermediate level.</li>
+  <li><strong>Better picture:</strong> use Wi-Fi or a strong mobile signal; keep the phone out of the sun and, on long streams, take it out of a thick case. Higher than 720p is not possible in the app.</li>
+  <li><strong>The app's daily request limit:</strong> try again after the reset, and let us know — we can ask Google for a larger limit.</li>
+  <li><strong>Penalties</strong> cannot be got around. While live streaming is restricted, do not stream through another channel: YouTube may close the account for that.</li>
+</ul>
+<p>YouTube's rules change from time to time; the details are on its help pages: <a href="https://support.google.com/youtube/answer/2474026">Get started with live streaming</a>, <a href="https://support.google.com/youtube/answer/9890437">Feature access</a>, <a href="https://support.google.com/youtube/answer/2802032">Community Guidelines strikes</a>, <a href="https://support.google.com/youtube/answer/3367684">Copyright issues with live streams</a>.</p>
 
 <h2 id="faq">Questions and problems</h2>
 
