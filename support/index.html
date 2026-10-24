@@ -131,7 +131,7 @@
 <p>Changed your mind before you are on air? Tap <kbd>Cancel</kbd> (or <kbd>Back</kbd>): the stream has not started yet, so it is simply removed from YouTube.</p>
 
 <h2 id="pause">Pause a stream</h2>
-<p>YouTube has no pause, so the app makes one. On air, tap <kbd>Pause</kbd> at the top right: viewers see a black screen saying <em>Paused — back soon</em> and hear nothing; the camera and the microphone are off. The stream itself goes on — the timer keeps counting, and the 90-minute limit too. Tap <kbd>Resume</kbd> and the camera is back in the same stream; the recording on YouTube is one video with the pause in it. To end the stream, resume first. Pause works for camera streams.</p>
+<p>YouTube has no pause, so the app makes one. On air, tap <kbd>Pause</kbd> at the top right: viewers see a black screen saying <em>Paused — back soon</em> and hear nothing; the camera and the microphone are off. The stream itself goes on — the timer keeps counting, and the stream length limit too (90 minutes unless raised in Settings). Tap <kbd>Resume</kbd> and the camera is back in the same stream; the recording on YouTube is one video with the pause in it. To end the stream, resume first. Pause works for camera streams.</p>
 
 <h2 id="schedule">Schedule a stream</h2>
 <ol>
@@ -162,7 +162,7 @@
   <dt><strong>Start at a scheduled time?</strong></dt>
   <dd>On: the stream is planned for the <strong>Start</strong> date and time below — at least one minute from now. Off: it starts as soon as you press <kbd>Stream</kbd>.</dd>
   <dt><strong>Duration</strong></dt>
-  <dd>How long the stream is planned for: from 3 to 90 minutes, or <em>Unlimited</em> (default). The app stops any stream after 90 minutes on air. Two of your own streams cannot overlap; an Unlimited one counts as 90 minutes.</dd>
+  <dd>How long the stream is planned for: from 3 minutes up to the stream length limit, or <em>Unlimited</em> (default). The app stops any stream after the limit — 90 minutes, or up to 4 hours if raised in <a href="#limits-settings">Settings</a>. Two of your own streams cannot overlap; an Unlimited one counts as the full limit.</dd>
   <dt><strong>Advanced settings</strong> — you rarely need them</dt>
   <dd>
     <ul>
@@ -188,7 +188,7 @@
   <li>The app connects to YouTube showing the first frame of the first video. As soon as you are on air, the videos play from the very beginning, one after another, with 3 seconds of black screen between them.</li>
   <li>When the last video ends, the stream finishes by itself.</li>
 </ol>
-<p>The first video sets the shape of the stream (upright or sideways); videos of another shape are shown with black bars. A stream runs at most 90 minutes, so the app takes the videos in order while they fit — one long video is always taken (the stream simply stops at 90 minutes); the rest are left out and the app tells you. On Android a video whose sound is recorded differently from the first one's plays without sound — the app tells you that too.</p>
+<p>The first video sets the shape of the stream (upright or sideways); videos of another shape are shown with black bars. A stream runs at most 90 minutes (or the longer limit set in Settings), so the app takes the videos in order while they fit — one long video is always taken (the stream simply stops at the limit); the rest are left out and the app tells you. On Android a video whose sound is recorded differently from the first one's plays without sound — the app tells you that too.</p>
 
 <h2 id="finish">Finish a stream</h2>
 <ol>
@@ -210,23 +210,32 @@
 
 <h3 id="limits-app">The app's limits</h3>
 <ul>
-  <li><strong>Picture from the camera:</strong> 720p — 1280×720 sideways or 720×1280 upright — at 30 frames per second, up to 2.5 Mbit/s. On a weak connection the app lowers the quality instead of dropping the stream; on a hot phone it lowers it too (to 1.5 or 1 Mbit/s) until the phone cools down.</li>
+  <li><strong>Picture from the camera:</strong> 720p — 1280×720 sideways or 720×1280 upright — at 30 frames per second, up to 2.5 Mbit/s. 1080p and 60 frames per second can be chosen in Settings (up to 4.5 Mbit/s for 1080p; more with 60 fps). On a weak connection the app lowers the quality instead of dropping the stream; on a hot phone it lowers it too (to 1.5 or 1 Mbit/s) until the phone cools down.</li>
   <li><strong>Sound:</strong> stereo AAC, 128 kbit/s.</li>
-  <li><strong>Videos from your library:</strong> streamed at most at 720p (the longer side at most 1280 pixels) and 30 frames per second, whatever their own quality — a 4K video is scaled down. The first video sets the shape of the stream.</li>
-  <li><strong>Length:</strong> at most 90 minutes on air per stream, a pause included. The recording stays on YouTube when the app stops the stream.</li>
+  <li><strong>Videos from your library:</strong> streamed at most at 720p (the longer side at most 1280 pixels; 1920 with 1080p in Settings) and 30 frames per second, whatever their own quality — a 4K video is scaled down. The first video sets the shape of the stream.</li>
+  <li><strong>Length:</strong> at most 90 minutes on air per stream (up to 4 hours if raised in Settings), a pause included. The recording stays on YouTube when the app stops the stream.</li>
   <li><strong>Orientation:</strong> a camera stream keeps the orientation it started with until the end.</li>
-  <li><strong>Scheduling:</strong> at least one minute ahead; two of your own streams cannot overlap (an Unlimited stream counts as 90 minutes). A stream reaches Ready 15 minutes before its start.</li>
+  <li><strong>Scheduling:</strong> at least one minute ahead; two of your own streams cannot overlap (an Unlimited stream counts as the full length limit). A stream reaches Ready 15 minutes before its start.</li>
   <li><strong>Title:</strong> up to 100 characters, without &lt; and &gt;.</li>
   <li><strong>Leaving the app:</strong> the stream needs the app on screen. If the connection drops, the app keeps reconnecting for up to 45 seconds. On Android, answering a call or switching to another app stops the stream (the recording up to that moment is kept); on iPhone a phone call only pauses the picture and sound.</li>
   <li><strong>The app's daily request limit:</strong> YouTube gives the app a fixed number of requests per day, shared by all its users. If it runs out, a new stream cannot start until the limit resets at midnight Pacific time (about 10:00 in Kyiv) — the app shows the exact time. A stream already on air goes on.</li>
 </ul>
+
+<h3 id="limits-settings">Limits you can raise in Settings</h3>
+<p>Side menu → Settings → Streaming. The defaults are the recommended values; change them only when you need to.</p>
+<ul>
+  <li><strong>Frame rate</strong> — 30 fps (default) or 60 fps for fast motion. More data and battery; a dim room looks grainier.</li>
+  <li><strong>Picture quality</strong> — 720p (default) or 1080p. 1080p uses about twice the mobile data (around 2 GB per hour instead of 1), needs a strong upload (6 Mbit/s or more) and warms the phone faster.</li>
+  <li><strong>Stream length</strong> — 90 minutes (default), 2, 3 or 4 hours. Long streams drain the battery and heat the phone, and use more of the app's daily request limit shared by all users.</li>
+</ul>
+<p>These settings are kept on the phone only — each phone has its own, and nothing is sent anywhere. A change applies to the next stream.</p>
 
 <h3 id="limits-youtube">YouTube's limits on a channel</h3>
 <ul>
   <li><strong>Live streaming must be on.</strong> The channel has to be verified, without live streaming restrictions in the past 90 days, and the person streaming must be at least 16 (younger only with an adult visibly present). The first switch-on can take up to 24 hours.</li>
   <li><strong>New live streams per day.</strong> YouTube limits how many live streams a channel can create in 24 hours; it does not publish the number. Every stream counts — also one cancelled before it went live — and in a group everyone's streams count together. When the limit is reached, wait 24 hours.</li>
   <li><strong>Streams at the same time.</strong> At most 10 active streams per channel. The app gives every stream its own stream key, so the per-key limit (3) does not matter.</li>
-  <li><strong>Recordings.</strong> YouTube keeps a recording automatically if the stream is shorter than 12 hours — always the case with the app's 90 minutes.</li>
+  <li><strong>Recordings.</strong> YouTube keeps a recording automatically if the stream is shorter than 12 hours — always the case with the app's limit of at most 4 hours.</li>
   <li><strong>Custom thumbnails</strong> need a verified channel and have a daily limit; when it is reached, set the thumbnail later in YouTube Studio.</li>
   <li><strong>Playing group streams inside apps</strong> (embedding) is an advanced YouTube feature; without it group streams open on YouTube.</li>
 </ul>
@@ -250,9 +259,9 @@
 
 <h3 id="limits-around">What you can do</h3>
 <ul>
-  <li><strong>Longer than 90 minutes:</strong> finish the stream and start a new one — you get two recordings.</li>
+  <li><strong>Longer than 90 minutes:</strong> raise the limit in Settings (up to 4 hours), or finish the stream and start a new one — you get two recordings.</li>
   <li><strong>Daily limit of new streams:</strong> avoid test starts you cancel; verify the channel's phone number to reach the intermediate level.</li>
-  <li><strong>Better picture:</strong> use Wi-Fi or a strong mobile signal; keep the phone out of the sun and, on long streams, take it out of a thick case. Higher than 720p is not possible in the app.</li>
+  <li><strong>Better picture:</strong> use Wi-Fi or a strong mobile signal; keep the phone out of the sun and, on long streams, take it out of a thick case. For a sharper picture choose 1080p in Settings — on a strong connection only.</li>
   <li><strong>The app's daily request limit:</strong> try again after the reset, and let us know — we can ask Google for a larger limit.</li>
   <li><strong>Penalties</strong> cannot be got around. While live streaming is restricted, do not stream through another channel: YouTube may close the account for that.</li>
 </ul>
@@ -276,7 +285,7 @@
 <p>The group's organizer must invite you as a <em>Manager</em> on the Brand Accounts page, and you must accept the invitation in the e-mail from Google. People added through <em>Permissions</em> in YouTube Studio do not see the channel in apps. See <a href="/support/group/#invite">Invite the members</a>.</p>
 
 <h3>My phone is full — can I film with the app instead?</h3>
-<p>Yes: go live, and the video goes straight to your own YouTube channel — nothing is stored on the phone. Keep in mind that it is a live stream: it needs an internet connection, and the recording has the stream's quality (up to 720p; lower on a weak connection), not your camera's full quality. Your channel also needs live streaming switched on beforehand (<a href="/support/channel/#enable-streaming">once, up to 24 hours</a>) — set it up before the day you need it.</p>
+<p>Yes: go live, and the video goes straight to your own YouTube channel — nothing is stored on the phone. Keep in mind that it is a live stream: it needs an internet connection, and the recording has the stream's quality (720p, or 1080p if chosen in Settings; lower on a weak connection), not your camera's full quality. Your channel also needs live streaming switched on beforehand (<a href="/support/channel/#enable-streaming">once, up to 24 hours</a>) — set it up before the day you need it.</p>
 
 <h3>Where are my videos?</h3>
 <p>On your YouTube channel. The app stores nothing on the phone and has no servers of its own. Open the YouTube app or <a href="https://studio.youtube.com">YouTube Studio</a> to watch, share, edit, download or delete any recording.</p>
