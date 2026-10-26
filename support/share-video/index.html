@@ -51,6 +51,7 @@
   <li><a href="#android">On Android</a></li>
   <li><a href="#what-happens">What happens in the app</a></li>
   <li><a href="#good-to-know">Good to know</a></li>
+  <li><a href="#developers">For developers: send videos from your app</a></li>
 </ul>
 
 <h2 id="why">Why it is useful</h2>
@@ -96,6 +97,54 @@
   <li><strong>Only videos:</strong> photos are left out — Live Photos too, even with the Loop or Bounce effect that makes them look like a video. On iPhone the app says how many were left out; on Android the share sheet offers the app only when the selection is videos.</li>
   <li><strong>Who sees it:</strong> the stream is unlisted, like any new stream in the app — only people with the link can watch. The title is the usual one for a stream started now; the notes say <em>Imported from library</em>.</li>
 </ul>
+
+<h2 id="developers">For developers: send videos from your app</h2>
+<p>If your app makes or keeps videos — a camera, a dashcam, a drone or sports app, a screen recorder, a school or club app — you can let your users send them to <strong>their own YouTube channel</strong> through Emdalex Streams. You hand over the video file the standard way; Emdalex Streams does the rest.</p>
+<ul>
+  <li><strong>Nothing to build on the YouTube side:</strong> no Google Cloud project, no OAuth consent screen, no YouTube API quota or audit, no server. Your app never sees the user's Google account.</li>
+  <li><strong>The user's phone stays free:</strong> the video does not have to be saved to Photos or Gallery first — share it from your app's own storage.</li>
+  <li><strong>Several videos at once</strong> become one stream and one recording, in the order you pass them.</li>
+</ul>
+<div class="note"><strong>Keep in mind: it is a live stream, not an upload.</strong> The video plays in real time on the user's phone — a 10-minute video takes 10 minutes, with the internet on and Emdalex Streams open. The recording has the stream's quality (720p, or 1080p if the user chose it), a stream lasts at most 90 minutes (or the user's longer limit), and it is unlisted. Tell your users this next to the button.</div>
+
+<h3>iOS (Swift)</h3>
+<p>On iPhone an app cannot pick another app's share extension for the user: show the share sheet with the video file and the user taps <kbd>Emdalex Streams</kbd> in it.</p>
+<pre><code>// UIKit: one or several local video files (MP4 or MOV), in the order to play
+let sheet = UIActivityViewController(activityItems: videoURLs, applicationActivities: nil)
+sheet.popoverPresentationController?.sourceView = button   // iPad
+present(sheet, animated: true)
+
+// SwiftUI
+ShareLink(items: videoURLs) {
+    Label("Send to YouTube", systemImage: "square.and.arrow.up")
+}</code></pre>
+<p>Pass <code>file://</code> URLs of finished files that stay in place until the share sheet closes (Emdalex Streams copies them while it shows <em>Preparing video…</em>). To show your own button only when the app is installed, add <code>emdalex</code> to <code>LSApplicationQueriesSchemes</code> and check <code>UIApplication.shared.canOpenURL(URL(string: "emdalex://")!)</code>.</p>
+
+<h3>Android (Kotlin)</h3>
+<p>On Android you can send the videos straight to Emdalex Streams, without the chooser:</p>
+<pre><code>// The file shared through your FileProvider (or any content:// URI your app can read)
+val uri = FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", videoFile)
+val intent = Intent(Intent.ACTION_SEND).apply {
+    type = "video/mp4"
+    putExtra(Intent.EXTRA_STREAM, uri)
+    setPackage("com.skdev.emdalex")
+    addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+}
+try {
+    startActivity(intent)
+} catch (e: ActivityNotFoundException) {
+    // Emdalex Streams is not installed: offer it on Google Play, or share with a chooser
+}</code></pre>
+<p>Several videos: <code>Intent.ACTION_SEND_MULTIPLE</code> with <code>putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris)</code>, in the order to play. Without <code>setPackage</code> the system chooser opens and the user picks the app. On Android 11 and later, to check for the app in advance, declare <code>&lt;queries&gt;&lt;package android:name="com.skdev.emdalex" /&gt;&lt;/queries&gt;</code>.</p>
+
+<h3>The rules</h3>
+<ul>
+  <li><strong>Video files only</strong> — what the phone itself plays (MP4 or MOV, H.264 or HEVC). Photos are left out. On Android, videos whose sound differs from the first one's (sample rate, channels) play without sound — keep a batch in one format.</li>
+  <li><strong>The user decides.</strong> The user must be signed in to Emdalex Streams with their channel; if the app was not running, it asks <em>Stream this video?</em> before going live. While the user is streaming already, the videos are not taken.</li>
+  <li><strong>Nothing comes back</strong> to your app: no result, no YouTube link. The recording appears in the user's channel and in the app's <strong>Completed</strong> tab; its notes say <em>Imported from library</em>.</li>
+  <li>The first video sets the shape of the stream; the others are fitted into it with black bars, 3 seconds of black between them.</li>
+</ul>
+<p>Questions or a use case we have not thought of? Write to <a href="mailto:sergey.krotkih@gmail.com">sergey.krotkih@gmail.com</a>.</p>
 
 <footer>
   <a href="/">Home</a>
