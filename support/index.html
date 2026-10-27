@@ -60,6 +60,7 @@
   <li><a href="/support/share-video/">Share a video from Photos or Gallery</a></li>
   <li><a href="#finish">Finish a stream</a></li>
   <li><a href="#watch">Watch streams and recordings</a></li>
+  <li><a href="#notifications">Notifications when a stream starts</a></li>
   <li><a href="#limits">Limits on streaming</a></li>
   <li><a href="#faq">Questions and problems</a></li>
   <li><a href="#revoke-access">Remove the app's access to your Google Account</a></li>
@@ -210,11 +211,24 @@
   <li><strong>Your own channel:</strong> tap a stream on the <strong>Live</strong> or <strong>Completed</strong> tab and it plays right in the app. Use the arrow buttons on the sides of the player to move to the previous or the next recording.</li>
   <li><strong>A group channel:</strong> YouTube does not let apps play group-channel streams inside them, so they open on YouTube. The first time, the app asks where — in a built-in browser or in the YouTube app. You can change this later in the side menu → <kbd>Settings</kbd> → <em>Watch group streams</em>.</li>
 </ul>
-<p>When someone in your group goes live, you get a notification — even when the app is in the background (iPhone checks now and then, so it may come a few minutes late). Live video on YouTube runs about 10–30 seconds behind; that is normal.</p>
+<p>When someone in your group goes live, the app tells you — how and how soon is explained in <a href="#notifications">Notifications when a stream starts</a>. Live video on YouTube runs about 10–30 seconds behind; that is normal.</p>
 
 <h3 id="categories">Find recordings by category</h3>
 <p>On the <strong>Completed</strong> tab tap <kbd>⋯</kbd> at the top right → <kbd>Categories</kbd>. The categories are shown as buttons above the list: tap one or several, and the list shows only their recordings — tap again to remove one. With none selected, every recording is shown. Each recording shows its category after the date. Search and <kbd>Sort</kbd> work there too; the back arrow returns to all recordings.</p>
 <p>A recording gets its category from the stream form or the finish form; streams started with the <kbd>▶</kbd> button or shared from Photos are <em>Other</em> unless you choose one when you finish. <em>Other</em> is not offered as a filter. Recordings made before categories existed count as <em>Other</em>.</p>
+
+<h2 id="notifications">Notifications when a stream starts</h2>
+<p>Emdalex Streams has no server of its own: your phone talks only to YouTube. That keeps your streams between you and YouTube — but it also means nobody can send your phone a message the moment another member goes live. The app has to find out by itself, and an app that is asleep cannot do that at any moment it likes. So the app does what can be done without a server:</p>
+<ul>
+  <li><strong>Scheduled streams — on time (iPhone).</strong> Whenever the app sees the list of streams, it asks iPhone to show <em>“Anna is going live”</em> at the start time of every stream another member has scheduled. iPhone shows it itself — even when the app is asleep or closed. Tap it: the app opens on the <strong>Live</strong> tab, and as soon as the stream is on air (usually within half a minute) it is outlined there.
+    <br>The app has to have seen the stream once after it was scheduled: when you open the app, or when iPhone wakes it in the background. A stream moved or deleted in the meantime is updated the same way.</li>
+  <li><strong>Streams started right away</strong> (the <kbd>▶</kbd> button, videos shared from Photos) cannot be known in advance. iPhone wakes the app in the background now and then and the app checks the list — but when is up to iPhone: after a few minutes or a few hours, and not at all in Low Power Mode or after you swipe the app away. So such a notification may come late, or not come.</li>
+  <li><strong>While the app is open</strong> you see a banner within half a minute, and the <strong>Live</strong> tab shows the number of streams on air.</li>
+  <li><strong>Your own scheduled streams</strong> remind you with <em>Time to go live</em> at the start time.</li>
+  <li><strong>Android:</strong> for now only the banner while the app is open; notifications in the background are on the way.</li>
+</ul>
+<p>All notifications arrive silently — a phone ringing next to someone who is streaming would be heard on air.</p>
+<div class="note"><strong>Want the group to be told on time?</strong> Schedule the stream instead of starting it with <kbd>▶</kbd>, and the earlier the better: each phone learns about it the next time its app is opened or woken in the background. And allow notifications for Emdalex Streams (iPhone Settings → Notifications).</div>
 
 <h2 id="limits">Limits on streaming</h2>
 <p>Two kinds of limits apply to every stream: the app's own (quality, length, scheduling) and YouTube's, which belong to the <em>channel</em>. In a group all members stream to one channel, so YouTube's limits — and penalties — are shared by the whole group.</p>
