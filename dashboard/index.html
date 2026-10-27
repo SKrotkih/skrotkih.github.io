@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Emdalex Streams — Dashboard</title>
+<!--
+  Read-only dashboard of the group channel's streams. Everything runs in the browser: Google
+  sign-in (Google Identity Services, the access token kept in memory only) and the YouTube Data
+  API called from this page. No server, nothing stored. Same partition, creator tag and
+  categories as the apps (see EmdalexStream/notes/decisions.md).
+-->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+  :root {
+    color-scheme: dark;
+    --brand-red: #C8261C; --on-red: #FFFFFF;
+    --ground: #000000; --card: #1C1C1E; --card-2: #2C2C2E; --separator: #38383A;
+    --text: #FFFFFF; --text-2: #EBEBF599; --meta: #AEAEB2; --danger: #FF6961; --go: #30D158;
+    --green: #30D158; --blue: #0A84FF; --red: #FF453A; --yellow: #FFD60A;
+    --space-xs: 4px; --space-sm: 8px; --space-md: 12px; --space-lg: 16px; --space-xl: 20px;
+    --radius-sm: 6px; --radius-md: 10px; --radius-lg: 16px;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--text);
+         font: 15px/20px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  header { position: sticky; top: 0; z-index: 2; background: var(--brand-red); color: var(--on-red); }
+  .bar { max-width: 960px; margin: 0 auto; height: 54px; padding: 0 var(--space-lg);
+         display: flex; align-items: center; gap: var(--space-md); }
+  .bar h1 { font-size: 17px; font-weight: 700; margin: 0; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bar img { width: 28px; height: 28px; border-radius: 50%; }
+  .bar button { background: none; border: 1px solid #FFFFFFAA; color: var(--on-red); border-radius: 999px;
+                padding: 6px 12px; font: 600 13px/18px inherit; font-family: inherit; cursor: pointer; }
+  main { max-width: 960px; margin: 0 auto; padding: var(--space-lg); }
+  .center { text-align: center; padding: 64px var(--space-lg); }
+  .center p { color: var(--meta); max-width: 440px; margin: var(--space-md) auto; }
+  .primary { background: var(--brand-red); color: var(--on-red); border: 0; border-radius: var(--radius-md);
+             padding: 12px 20px; font: 600 17px/22px inherit; font-family: inherit; cursor: pointer; }
+  .notice { background: var(--card); border-left: 4px solid var(--brand-red); border-radius: var(--radius-md);
+            padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-lg); }
+  /* On air now */
+  .live-strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-xl); }
+  .live-card { background: var(--card); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; text-decoration: none; color: inherit; }
+  .live-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--card-2); }
+  .live-card .info { padding: var(--space-md); }
+  .badge { display: inline-block; background: var(--brand-red); color: var(--on-red); border-radius: var(--radius-sm);
+           font: 700 12px/16px inherit; font-family: inherit; padding: 2px 6px; margin-right: var(--space-sm); vertical-align: 1px; }
+  /* Tabs */
+  .tabs { display: flex; gap: var(--space-xs); background: var(--card); border-radius: var(--radius-md); padding: 3px; margin-bottom: var(--space-md); }
+  .tabs button { flex: 1; background: none; border: 0; color: var(--text); border-radius: 8px; padding: 7px 4px;
+                 font: 600 13px/18px inherit; font-family: inherit; cursor: pointer; }
+  .tabs button.on { background: var(--brand-red); color: var(--on-red); }
+  .tabs .n { opacity: .75; font-weight: 400; margin-left: 4px; }
+  /* Filters */
+  .filters { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-md); }
+  .filters input, .filters select { background: var(--card); color: var(--text); border: 0; border-radius: var(--radius-md);
+                                    padding: 9px 12px; font: 15px/20px inherit; font-family: inherit; }
+  .filters input { flex: 1 1 220px; }
+  .count { color: var(--meta); font-size: 12px; margin: 0 0 var(--space-sm) var(--space-xs); }
+  /* Rows */
+  .list { background: var(--card); border-radius: var(--radius-lg); overflow: hidden; }
+  .row { display: flex; gap: var(--space-md); align-items: center; padding: var(--space-sm) var(--space-md);
+         text-decoration: none; color: inherit; border-top: 1px solid var(--separator); }
+  .row:first-child { border-top: 0; }
+  .row:hover { background: var(--card-2); }
+  .thumb { width: 112px; height: 63px; border-radius: var(--radius-sm); object-fit: cover; flex: none; background: var(--card-2); }
+  .text { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 2px; }
+  .title { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .title .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: var(--space-sm); vertical-align: 1px; }
+  .name { font-size: 12px; font-weight: 500; }
+  .notes { font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .date { font-size: 12px; color: var(--meta); font-variant-numeric: tabular-nums; }
+  .date.go { color: var(--go); font-weight: 600; }
+  .date.late { color: var(--danger); font-weight: 600; }
+  .pill { display: inline-block; background: var(--card-2); border-radius: 999px; padding: 0 6px; margin-left: 6px; font-weight: 600; color: var(--text); }
+  .empty { color: var(--meta); text-align: center; padding: 40px var(--space-lg); }
+  footer { max-width: 960px; margin: 0 auto; padding: var(--space-xl) var(--space-lg) 48px; color: var(--meta); font-size: 12px; }
+  footer a { color: var(--meta); }
+  @media (max-width: 520px) {
+    .thumb { width: 80px; height: 45px; }
+    .tabs button { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <h1 id="heading">Emdalex Streams</h1>
+  <img id="avatar" alt="" hidden>
+  <button id="signOut" hidden>Sign out</button>
+</div></header>
+
+<main id="main">
+  <div class="center" id="signInView">
+    <h2>Your group's streams</h2>
+    <p>Sign in with the Google account that manages your YouTube channel — the same one as in the app — and choose the channel. This page only shows the streams; it changes nothing.</p>
+    <button class="primary" id="signIn">Sign in with Google</button>
+  </div>
+  <div id="appView" hidden>
+    <div id="message" class="notice" hidden></div>
+    <div id="liveStrip" class="live-strip"></div>
+    <div class="tabs" id="tabs"></div>
+    <div class="filters">
+      <input id="search" type="search" placeholder="Search by title" autocomplete="off">
+      <select id="member"><option value="">Everyone</option></select>
+      <select id="category"><option value="">All categories</option></select>
+    </div>
+    <div class="count" id="count"></div>
+    <div class="list" id="list"></div>
+  </div>
+</main>
+
+<footer>
+  Read-only view of your channel's streams. Everything happens in your browser: the sign-in stays in this tab only, nothing is stored or sent anywhere but to YouTube. To schedule or go live, use the Emdalex Streams app. ·
+  <a href="/support/">Support</a> · <a href="/privacy-policy/">Privacy Policy</a>
+</footer>
+
+<script>
+"use strict";
+
+// ---- Settings (the same values as the apps) ----
+const CLIENT_ID = "222473395284-3hrn85i67iuaa6ondm4iulcuv1o9aj18.apps.googleusercontent.com";
+// The scope the apps use (already verified by Google); this page only reads
+const SCOPE = "https://www.googleapis.com/auth/youtube.force-ssl";
+const API = "https://www.googleapis.com/youtube/v3/";
+const REFRESH_MS = 60 * 1000;
+const READY_WINDOW_MS = 15 * 60 * 1000;   // `readyWindow`
+const EXPIRY_GRACE_MS = 90 * 1000;        // `expiryGrace`
+const MAX_PAGES = 4;                      // 200 streams, as the apps
+const CATEGORIES = { 0: "Other", 1: "Home", 2: "Work / School", 3: "Travel", 4: "Friends", 5: "Pets", 6: "Hobby", 7: "Fun" };
+const CATEGORY_ORDER = [1, 2, 3, 4, 5, 6, 7, 0];
+const TABS = [["scheduled", "Scheduled"], ["ready", "Ready"], ["live", "Live"], ["completed", "Completed"]];
+
+// ---- State ----
+let token = null;
+let tokenClient = null;
+let broadcasts = [];
+let viewers = {};
+let tab = "completed";
+let timer = null;
+
+const $ = (id) => document.getElementById(id);
+
+// ---- Sign-in (Google Identity Services, token in memory only) ----
+
+function initGoogle() {
+  if (!window.google || !google.accounts || !google.accounts.oauth2) { setTimeout(initGoogle, 100); return; }
+  tokenClient = google.accounts.oauth2.initTokenClient({
+    client_id: CLIENT_ID,
+    scope: SCOPE,
+    callback: (response) => {
+      if (response.error) { showMessage("Sign-in did not finish: " + response.error); return; }
+      token = response.access_token;
+      start();
+    },
+  });
+}
+
+function signIn() {
+  if (!tokenClient) return;
+  tokenClient.requestAccessToken({ prompt: "select_account" });
+}
+
+function signOut() {
+  if (token && google.accounts.oauth2.revoke) google.accounts.oauth2.revoke(token, () => {});
+  token = null;
+  broadcasts = [];
+  clearInterval(timer);
+  $("appView").hidden = true;
+  $("signInView").hidden = false;
+  $("signOut").hidden = true;
+  $("avatar").hidden = true;
+  $("heading").textContent = "Emdalex Streams";
+}
+
+// ---- YouTube Data API ----
+
+class ApiError extends Error {
+  constructor(status, reason, message) { super(message); this.status = status; this.reason = reason; }
+}
+
+async function api(path, params) {
+  const url = new URL(API + path);
+  Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
+  const res = await fetch(url, { headers: { Authorization: "Bearer " + token } });
+  if (!res.ok) {
+    let reason = "", message = res.statusText;
+    try {
+      const body = await res.json();
+      reason = body.error?.errors?.[0]?.reason || "";
+      message = body.error?.message || message;
+    } catch (_) {}
+    throw new ApiError(res.status, reason, message);
+  }
+  return res.json();
+}
+
+async function loadChannel() {
+  const data = await api("channels", { part: "snippet", mine: "true" });
+  const channel = data.items?.[0];
+  if (!channel) throw new ApiError(404, "noChannel", "This Google account has no YouTube channel.");
+  $("heading").textContent = channel.snippet.title;
+  const picture = channel.snippet.thumbnails?.default?.url;
+  if (picture) { $("avatar").src = picture; $("avatar").hidden = false; }
+}
+
+async function loadBroadcasts() {
+  let all = [], pageToken = "";
+  for (let page = 0; page < MAX_PAGES; page++) {
+    // As the apps: every state of the signed-in channel's broadcasts
+    const params = { part: "snippet,status,contentDetails", broadcastStatus: "all", maxResults: "50" };
+    if (pageToken) params.pageToken = pageToken;
+    const data = await api("liveBroadcasts", params);
+    all = all.concat(data.items || []);
+    pageToken = data.nextPageToken;
+    if (!pageToken) break;
+  }
+  broadcasts = all;
+  // Viewers of the streams on air (1 unit), as on the camera screen
+  const live = all.filter((b) => partOf(b) === "live").map((b) => b.id);
+  viewers = {};
+  if (live.length) {
+    const data = await api("videos", { part: "liveStreamingDetails", id: live.join(",") });
+    (data.items || []).forEach((v) => { viewers[v.id] = v.liveStreamingDetails?.concurrentViewers; });
+  }
+}
+
+async function start() {
+  $("signInView").hidden = true;
+  $("appView").hidden = false;
+  $("signOut").hidden = false;
+  hideMessage();
+  try {
+    await loadChannel();
+    await refresh();
+    clearInterval(timer);
+    timer = setInterval(() => { if (!document.hidden) refresh(); }, REFRESH_MS);
+  } catch (e) { handleError(e); }
+}
+
+async function refresh() {
+  try {
+    await loadBroadcasts();
+    hideMessage();
+    fillFilters();
+    render();
+  } catch (e) { handleError(e); }
+}
+
+function handleError(e) {
+  if (e.status === 401) {
+    clearInterval(timer);
+    showMessage("Your sign-in has ended. ", "Sign in again", signIn);
+    return;
+  }
+  if (e.reason === "quotaExceeded" || e.reason === "dailyLimitExceeded") {
+    showMessage("YouTube's daily request limit for Emdalex Streams is reached. The list updates again after midnight, Pacific time.");
+  } else if (e.reason === "liveStreamingNotEnabled") {
+    showMessage("Live streaming is not enabled on this channel yet. ", "How to enable it", () => location.href = "/support/channel/#enable-streaming");
+  } else if (e.reason === "noChannel" || e.reason === "youtubeSignupRequired") {
+    showMessage("This Google account has no YouTube channel. Sign out and choose the account (or the brand channel) you use in the app.");
+  } else {
+    showMessage("Could not load the streams: " + e.message);
+  }
+}
+
+function showMessage(text, linkText, action) {
+  const box = $("message");
+  box.textContent = text;
+  if (linkText) {
+    const a = document.createElement("a");
+    a.href = "#"; a.textContent = linkText; a.style.color = "var(--text)";
+    a.onclick = (ev) => { ev.preventDefault(); action(); };
+    box.appendChild(a);
+  }
+  box.hidden = false;
+}
+function hideMessage() { $("message").hidden = true; }
+
+// ---- The apps' rules ----
+
+/** Creator tag: the description's last line `emdalex:{"cat":3,"id":…,"name":…,"v":1}` (legacy `Streamer: name`). */
+function tagOf(description) {
+  const lines = (description || "").split("\n");
+  const last = (lines[lines.length - 1] || "").trim();
+  if (last.startsWith("emdalex:")) {
+    try {
+      const p = JSON.parse(last.slice("emdalex:".length));
+      return { name: p.name || null, cat: Number.isInteger(p.cat) ? p.cat : 0, lines: 1 };
+    } catch (_) { return { name: null, cat: 0, lines: 0 }; }
+  }
+  let name = null, count = 0;
+  for (let i = lines.length - 1; i >= 0 && count < 2; i--) {
+    const l = lines[i].trim();
+    if (l.startsWith("Streamer: ")) { name = l.slice(10).trim(); count++; }
+    else if (l.startsWith("StreamerID: ")) { count++; }
+    else break;
+  }
+  return { name, cat: 0, lines: count };
+}
+
+function notesOf(description) {
+  const tag = tagOf(description);
+  const lines = (description || "").split("\n");
+  const body = tag.lines ? lines.slice(0, lines.length - tag.lines) : lines;
+  return body.join("\n").trim();
+}
+
+/** Scheduled · Ready · Live · Completed (`BroadcastPartition`). */
+function partOf(b, now = Date.now()) {
+  const life = b.status?.lifeCycleStatus;
+  if (life === "live" || life === "liveStarting" || life === "testing" || life === "testStarting") return "live";
+  if (life === "complete" || life === "revoked") return "completed";
+  const start = Date.parse(b.snippet.scheduledStartTime || "");
+  if (!isNaN(start) && start - now > READY_WINDOW_MS) return "scheduled";
+  return "ready";
+}
+
+function isExpired(b, now = Date.now()) {
+  const start = Date.parse(b.snippet.scheduledStartTime || "");
+  return partOf(b, now) === "ready" && !isNaN(start) && now - start > EXPIRY_GRACE_MS;
+}
+
+function categoryOf(b) { return CATEGORIES[tagOf(b.snippet.description).cat] ? tagOf(b.snippet.description).cat : 0; }
+
+// ---- Formatting (as the rows in the app) ----
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+function rowDate(ms) {
+  const d = new Date(ms);
+  const time = String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0");
+  const year = d.getFullYear() !== new Date().getFullYear() ? " " + d.getFullYear() : "";
+  return time + ", " + d.getDate() + " " + MONTHS[d.getMonth()] + year;
+}
+function duration(ms) {
+  const total = Math.max(0, Math.round(ms / 1000));
+  const h = Math.floor(total / 3600), m = Math.floor((total % 3600) / 60), s = total % 60;
+  const pad = (n) => String(n).padStart(2, "0");
+  return h > 0 ? `${h} h ${pad(m)} min ${pad(s)} s` : `${m} min ${pad(s)} s`;
+}
+function countdown(ms) {
+  const total = Math.max(0, Math.round(ms / 1000));
+  const h = Math.floor(total / 3600), m = Math.floor((total % 3600) / 60), s = total % 60;
+  return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(s).padStart(2, "0");
+}
+function privacyColor(status) {
+  return status === "public" ? "var(--green)" : status === "private" ? "var(--red)" : "var(--blue)";
+}
+function thumbOf(b) {
+  const t = b.snippet.thumbnails || {};
+  return (t.medium || t.high || t.default || {}).url || "";
+}
+function watchUrl(b) { return "https://youtu.be/" + b.id; }
+
+// ---- Rendering (DOM only: nothing from the API goes in as HTML) ----
+
+function el(tag, attrs, children) {
+  const node = document.createElement(tag);
+  Object.entries(attrs || {}).forEach(([k, v]) => {
+    if (k === "text") node.textContent = v;
+    else if (k === "style") node.style.cssText = v;
+    else node.setAttribute(k, v);
+  });
+  (children || []).forEach((c) => c && node.appendChild(c));
+  return node;
+}
+
+function fillFilters() {
+  const names = [...new Set(broadcasts.map((b) => tagOf(b.snippet.description).name).filter(Boolean))].sort();
+  const member = $("member"), chosen = member.value;
+  member.replaceChildren(el("option", { value: "", text: "Everyone" }), ...names.map((n) => el("option", { value: n, text: n })));
+  member.value = names.includes(chosen) ? chosen : "";
+  const category = $("category"), chosenCat = category.value;
+  if (category.options.length === 1) {
+    CATEGORY_ORDER.forEach((c) => category.appendChild(el("option", { value: String(c), text: CATEGORIES[c] })));
+  }
+  category.value = chosenCat;
+}
+
+function visible(part) {
+  const now = Date.now();
+  const query = $("search").value.trim().toLowerCase();
+  const member = $("member").value;
+  const cat = $("category").value;
+  let items = broadcasts.filter((b) => partOf(b, now) === part)
+    .filter((b) => !query || b.snippet.title.toLowerCase().includes(query))
+    .filter((b) => !member || tagOf(b.snippet.description).name === member)
+    .filter((b) => cat === "" || categoryOf(b) === Number(cat));
+  const startOf = (b) => Date.parse(b.snippet.actualStartTime || b.snippet.scheduledStartTime || b.snippet.publishedAt || "") || 0;
+  if (part === "completed" || part === "live") items.sort((a, b) => startOf(b) - startOf(a));
+  else items.sort((a, b) => startOf(a) - startOf(b));
+  return items;
+}
+
+function dateLine(b, part) {
+  const now = Date.now();
+  if (part === "completed") {
+    const start = Date.parse(b.snippet.actualStartTime || b.snippet.publishedAt);
+    const end = Date.parse(b.snippet.actualEndTime || "");
+    return { text: rowDate(start) + (isNaN(end) ? "" : " · " + duration(end - start)) };
+  }
+  if (part === "live") {
+    const start = Date.parse(b.snippet.actualStartTime || b.snippet.scheduledStartTime);
+    const n = viewers[b.id];
+    return { text: "On air since " + rowDate(start) + (n != null ? " · " + n + " watching" : "") };
+  }
+  const start = Date.parse(b.snippet.scheduledStartTime);
+  if (part === "ready") {
+    if (isExpired(b, now)) return { text: rowDate(start) + " · expired", cls: "late" };
+    return { text: "starts in " + countdown(start - now), cls: "go" };
+  }
+  return { text: rowDate(start) };
+}
+
+function row(b, part) {
+  const tag = tagOf(b.snippet.description);
+  const notes = notesOf(b.snippet.description).split("\n").find((l) => l.trim()) || "";
+  const date = dateLine(b, part);
+  const dateNode = el("div", { class: "date" + (date.cls ? " " + date.cls : ""), text: date.text });
+  if (tag.cat) dateNode.appendChild(el("span", { class: "pill", text: CATEGORIES[tag.cat] || "Other" }));
+  const title = el("div", { class: "title" }, [
+    part === "live" ? el("span", { class: "badge", text: "LIVE" }) : null,
+    el("span", { class: "dot", style: "background:" + privacyColor(b.status?.privacyStatus), title: b.status?.privacyStatus || "" }),
+    document.createTextNode(b.snippet.title),
+  ]);
+  return el("a", { class: "row", href: watchUrl(b), target: "_blank", rel: "noopener" }, [
+    el("img", { class: "thumb", src: thumbOf(b), alt: "", loading: "lazy" }),
+    el("div", { class: "text" }, [
+      title,
+      tag.name ? el("div", { class: "name", text: tag.name }) : null,
+      notes ? el("div", { class: "notes", text: notes }) : null,
+      dateNode,
+    ]),
+  ]);
+}
+
+function render() {
+  const now = Date.now();
+  // Tabs with their counts
+  const tabs = $("tabs");
+  tabs.replaceChildren(...TABS.map(([key, label]) => {
+    const n = broadcasts.filter((b) => partOf(b, now) === key).length;
+    const button = el("button", { class: key === tab ? "on" : "" }, [document.createTextNode(label), el("span", { class: "n", text: String(n) })]);
+    button.onclick = () => { tab = key; render(); };
+    return button;
+  }));
+  // On air now: big cards above everything
+  const live = broadcasts.filter((b) => partOf(b, now) === "live");
+  $("liveStrip").replaceChildren(...live.map((b) => {
+    const tag = tagOf(b.snippet.description);
+    const n = viewers[b.id];
+    return el("a", { class: "live-card", href: watchUrl(b), target: "_blank", rel: "noopener" }, [
+      el("img", { src: thumbOf(b), alt: "" }),
+      el("div", { class: "info" }, [
+        el("div", { class: "title" }, [el("span", { class: "badge", text: "LIVE" }), document.createTextNode(b.snippet.title)]),
+        el("div", { class: "date", text: [tag.name, n != null ? n + " watching" : null].filter(Boolean).join(" · ") }),
+      ]),
+    ]);
+  }));
+  // The list of the chosen tab
+  const items = visible(tab);
+  $("count").textContent = items.length === 1 ? "1 stream" : items.length + " streams";
+  $("list").replaceChildren(...(items.length
+    ? items.map((b) => row(b, tab))
+    : [el("div", { class: "empty", text: "Nothing here." })]));
+}
+
+// ---- Wiring ----
+
+$("signIn").onclick = signIn;
+$("signOut").onclick = signOut;
+["search", "member", "category"].forEach((id) => $(id).addEventListener("input", render));
+// Countdowns on Ready tick without a request
+setInterval(() => { if (token && tab === "ready" && !document.hidden) render(); }, 1000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden && token) refresh(); });
+initGoogle();
+</script>
+</body>
+</html>
