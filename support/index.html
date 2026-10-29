@@ -123,7 +123,7 @@
   <li><strong>Completed</strong> — finished streams. Their recordings are on YouTube; search them by title or sort by date.</li>
 </ul>
 <p>Your own streams are marked with a <strong>dot</strong> before the title: green for public, blue for unlisted, red for private. Only you can start, edit, finish or delete them; on a group channel you see the others' streams too, but cannot change them. To delete one of your streams, swipe its row to the left.</p>
-<p>The side menu (<kbd>☰</kbd>) has <kbd>Quick Start</kbd> (the introduction again), <kbd>Open the guide</kbd> (this page), <kbd>Settings</kbd> (where group streams play, the frame rate of camera streams) and <kbd>Log Out</kbd>.</p>
+<p>The side menu (<kbd>☰</kbd>) has <kbd>Quick Start</kbd> (the introduction again), <kbd>Open the guide</kbd> (this page), <kbd>Settings</kbd> (an <a href="#wake">alarm for your scheduled streams</a>, where group streams play, the frame rate of camera streams) and <kbd>Log Out</kbd>.</p>
 
 <h2 id="go-live">Go live right now</h2>
 <ol>
@@ -152,7 +152,15 @@
   <li>Set the <strong>Start</strong> time (at least one minute from now) and the <strong>Duration</strong>.</li>
   <li>Tap <kbd>Save</kbd>. The stream appears on <strong>Scheduled</strong>, and 15 minutes before the start it moves to <strong>Ready</strong>.</li>
 </ol>
-<p><strong>At the start time</strong> the app goes live by itself if it is open. If the app is in the background, you get a <em>Time to go live</em> notification — tap it and the stream starts. You can also start earlier: on the <strong>Ready</strong> tab tap <kbd>GO LIVE FROM CAMERA</kbd> on your stream.</p>
+<p><strong>At the start time</strong> the app goes live by itself if it is open. If the app is in the background, you get a <em>Time to go live</em> notification — tap it and the stream starts. You can also start earlier: on the <strong>Ready</strong> tab tap <kbd>GO LIVE FROM CAMERA</kbd> on your stream. Phone on a tripod and you won't be holding it at the start? Let it <a href="#wake">wake up for the stream</a>.</p>
+
+<h3 id="wake">Wake the phone for your stream</h3>
+<p>Turn on side menu → <kbd>Settings</kbd> → <em>My scheduled streams</em> → <kbd>Wake me for my streams</kbd> (off by default). Then, at the start time of each stream you scheduled, the phone rings an alarm and wakes up — even when it is locked, the screen is off or the app is closed:</p>
+<ul>
+  <li><strong>iPhone</strong> (iOS 26 or later): a full-screen <em>Time to go live</em> alarm, on the Lock Screen too. Tap <kbd>Go live</kbd>, unlock the phone, and the app opens and starts the stream. iPhone does not let any app turn on the camera by itself, so this one tap is needed. The first time, iPhone asks whether the app may set alarms — tap <kbd>Allow</kbd>.</li>
+  <li><strong>Android:</strong> a red <em>Time to go live</em> screen over the lock screen with a 10-second countdown. When it reaches zero, the stream starts by itself — no need to unlock the phone. Tap <kbd>Go live now</kbd> to start at once, or <kbd>Cancel</kbd> to keep the stream waiting on the <strong>Ready</strong> tab. The phone has to allow notifications, <em>Alarms &amp; reminders</em> and, on Android 14 and later, <em>full-screen notifications</em>: if one is missing, a red line under the switch says which — tap it to open the right page of the phone's settings.</li>
+</ul>
+<p>No alarm while the app is open — it starts the stream itself, as always — or for a stream switched to <kbd>⋯</kbd> → <kbd>Don't start automatically</kbd>. The reminder a minute before the start stays. Set the phone up before you leave it: on a tripod, on a charger, camera pointing where you want it.</p>
 <p>To change a scheduled stream, tap it. Two of your own streams cannot overlap in time — the app tells you if they do.</p>
 
 <h2 id="stream-form">The stream form, field by field</h2>
@@ -236,11 +244,11 @@
     <br>The app has to have seen the stream once after it was scheduled: when you open the app, or when iPhone wakes it in the background. A stream moved or deleted in the meantime is updated the same way.</li>
   <li><strong>Streams started right away</strong> (the <kbd>▶</kbd> button, videos shared from Photos) cannot be known in advance. iPhone wakes the app in the background now and then and the app checks the list — but when is up to iPhone: after a few minutes or a few hours, and not at all in Low Power Mode or after you swipe the app away. So such a notification may come late, or not come.</li>
   <li><strong>While the app is open</strong> you see a banner within half a minute, and the <strong>Live</strong> tab shows the number of streams on air.</li>
-  <li><strong>Your own scheduled streams</strong> remind you with <em>Time to go live</em> at the start time.</li>
+  <li><strong>Your own scheduled streams</strong> remind you with a sound a minute before the start (<em>Your stream starts in a minute</em>) and with <em>Time to go live</em> at the start time — or with an alarm, if you turned on <a href="#wake">Wake me for my streams</a>.</li>
   <li id="add-to-calendar"><strong>Put a member's stream in your calendar.</strong> On the <strong>Scheduled</strong> or <strong>Ready</strong> tab tap <kbd>⋯</kbd> on another member's stream → <kbd>Add to Calendar</kbd>: your phone's calendar opens with the stream (title, time, link) — tap Add there. The calendar reminds you whatever the app is doing: on iPhone a minute before the start, on Android with the calendar's usual reminder. If the stream is moved later, the calendar is not updated — add it again. For your own streams use the <a href="#stream-form">Add to Calendar</a> switch on the stream form.</li>
   <li><strong>Android:</strong> the same notification at the start time of every scheduled stream. On the minute when the app may set alarms: on Android 12 and later it asks once — tap <kbd>Allow</kbd> and turn on <em>Allow setting alarms and reminders</em> (or later: Settings → Apps → Special app access → Alarms &amp; reminders). Without it the notification comes within 10 minutes of the start. And Android lets the app check the list every 15 minutes in the background, so a stream started right away is announced too — <em>“Anna is live now”</em>, up to about 15 minutes late. The app asks once for permission to show notifications.</li>
 </ul>
-<p>All notifications arrive silently — a phone ringing next to someone who is streaming would be heard on air.</p>
+<p>Notifications about other members' streams arrive silently — a phone ringing next to someone who is streaming would be heard on air. Only your own stream sounds: the reminder a minute before it and the <a href="#wake">alarm</a> at its start, when nothing is on air yet.</p>
 <div class="note"><strong>Want the group to be told on time?</strong> Schedule the stream instead of starting it with <kbd>▶</kbd>, and the earlier the better: each phone learns about it the next time its app is opened or woken in the background. And allow notifications for Emdalex Streams (iPhone Settings → Notifications; Android Settings → Apps → Emdalex Streams → Notifications).</div>
 <p><strong>No notifications on Android?</strong> Some phones (Xiaomi, Huawei, some Samsung models) stop apps in the background to save battery. Open Settings → Apps → Emdalex Streams → Battery and allow it to run in the background (the item is called <em>Unrestricted</em>, <em>No restrictions</em> or similar).</p>
 
@@ -343,7 +351,7 @@
 <p>New streams are <em>unlisted</em>: only people with the link or with access to the channel can watch them, and they never appear in search or recommendations. You can choose <em>private</em> or <em>public</em> when scheduling a stream. A finished stream can be changed later: on the Completed tab tap ⋯ → <kbd>Who can watch…</kbd>. Only the phone that streamed it can do that. Before making a stream public the app asks once more: you can make it unlisted or private again later, but what people have already watched, saved or shared can't be taken back.</p>
 
 <h3>A stream did not start at its scheduled time</h3>
-<p>A scheduled stream starts only on the phone of the person who created it, and only while the app is open or after that person taps the <em>Time to go live</em> notification. Make sure notifications are allowed for Emdalex Streams in the phone's Settings and that the phone is not in Low Power Mode (iPhone) or Battery Saver (Android).</p>
+<p>A scheduled stream starts only on the phone of the person who created it, and only while the app is open, after that person taps the <em>Time to go live</em> notification, or with <a href="#wake">Wake me for my streams</a> turned on. Make sure notifications are allowed for Emdalex Streams in the phone's Settings and that the phone is not in Low Power Mode (iPhone) or Battery Saver (Android).</p>
 
 <h3>The connection dropped during a stream</h3>
 <p>If the mobile network drops for a moment, the app reconnects by itself: <em>Connection lost, reconnecting…</em> appears under the status, and the stream goes on on YouTube. The app keeps trying for up to 45 seconds; if the network is not back by then, the stream is stopped and the recording up to that moment stays on YouTube. On a slow connection the app lowers the video quality instead of stopping (<em>Weak connection</em>); on a hot phone it does the same to let it cool down. The screen stays on during a stream, so the phone can stand on a tripod untouched.</p>
