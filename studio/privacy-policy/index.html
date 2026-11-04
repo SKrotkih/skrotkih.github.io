@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emdalex Studio — Privacy Policy</title>
+<link rel="canonical" href="https://emdalex.com/studio/privacy-policy/">
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+         max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 30px; margin-bottom: 4px; }
+  h2 { font-size: 21px; margin-top: 36px; }
+  .meta { opacity: .7; margin-top: 0; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: #B3261E; }
+  code { font-size: 0.9em; word-break: break-all; }
+  @media (prefers-color-scheme: dark) { a { color: #FF6B5E; } }
+</style>
+</head>
+<body>
+
+<p class="meta"><a href="/studio/">Emdalex Studio</a> · Privacy Policy</p>
+<h1>Emdalex Studio — Privacy Policy</h1>
+<p class="meta">Effective date: November 4, 2026 · Developer: Serhii Krotkykh · Contact: <a href="mailto:sergey.krotkih@gmail.com">sergey.krotkih@gmail.com</a></p>
+
+<p>This Privacy Policy describes what information the Emdalex Studio application for iPhone (“the app”, “we”, “us”) accesses, how it is used, where it is stored, with whom it is shared and how you can control it. The pages of this website collect nothing.</p>
+
+<p><strong>In short:</strong> the app has no servers of its own. The clips and videos you make are kept on your iPhone. For streams, the app talks only to Google’s YouTube services, on your behalf and with your permission. We — the developer — never receive, store or see any of your data.</p>
+
+<h2>1. Information the app accesses</h2>
+
+<h3>1.1 Google account information (via Google Sign-In)</h3>
+<p>When you sign in with Google, the app receives from Google:</p>
+<ul>
+  <li>your name and profile picture,</li>
+  <li>your e-mail address,</li>
+  <li>an OAuth access token and refresh token for the YouTube channel you selected (your own channel, or a brand-account channel you manage).</li>
+</ul>
+<p><strong>Why:</strong> the name and picture are shown in the app’s side menu so you can see which account is signed in; the streams you create carry a short tag in the last line of their description — your name and an anonymous ID of your phone (a random identifier made by the app on first launch, not linked to the device hardware or your account) — so that members of a shared channel can tell whose stream is whose. The tag is stored on YouTube as part of the stream and is deleted together with it. The tokens let the app call the YouTube API on your behalf.</p>
+<p><strong>Where:</strong> tokens are stored in the iOS Keychain on your device; name, e-mail and picture are kept in the app’s memory and local storage on your device only. Nothing is transmitted to us.</p>
+
+<h3>1.2 Your clips, videos and photos</h3>
+<p><strong>Recording a clip.</strong> When you record a clip, the app uses the camera and the microphone to make a video file on your iPhone. It is not streamed, uploaded or analysed.</p>
+<p><strong>Adding from your library.</strong> When you add a clip from Photos or choose a photo for a video’s cover, the system photo picker hands the app only the items you pick; the app does not read the rest of your library. The app keeps its own copy of a picked video; a cover photo is resized to 1280×720 and kept as a JPEG. The originals in Photos are not changed.</p>
+<p><strong>Saving to Photos.</strong> <em>Save to Photos</em> adds the clip to your photo library. For this the app asks only for permission to add to Photos, not to read it.</p>
+<p><strong>Where:</strong> clips, videos (their names, the order of clips, covers and video settings) are kept in the app’s own storage on your iPhone. Like other apps’ data, they are included in your iPhone’s backup (iCloud Backup or a computer backup) if you use one; that backup is handled by Apple under your Apple account, not by us. They are not sent to Google, to us or to anyone else. They are deleted when you remove them in the app or delete the app.</p>
+
+<h3>1.3 YouTube data (via the YouTube Data API)</h3>
+<p>The app uses <strong>YouTube API Services</strong> with the OAuth scope <code>https://www.googleapis.com/auth/youtube.force-ssl</code>. With it the app, acting as you:</p>
+<ul>
+  <li><strong>reads</strong> the list of live broadcasts on your channel — title, description, scheduled and actual start/end times, privacy status, thumbnail, status (upcoming, live, completed) — to show them on the app’s Streams tab (Upcoming and Recorded);</li>
+  <li><strong>creates</strong> live broadcasts and the associated live streams (the RTMP ingestion address your phone streams to) when you start a stream;</li>
+  <li><strong>updates</strong> a broadcast’s title, description, thumbnail and privacy status when you edit it or finish it;</li>
+  <li><strong>starts and ends</strong> broadcasts (transitions to “live” and “complete”) when you go live or finish;</li>
+  <li><strong>deletes</strong> a broadcast, its recording and its stream when you delete it in the app.</li>
+</ul>
+<p><strong>Why:</strong> these are the app’s streaming features — there is no other use. The app does not upload your clips or videos, and it does not read your comments, subscriptions, watch history, playlists or any videos other than the live broadcasts listed above. It does not use YouTube data for advertising, analytics, profiling or training of any kind.</p>
+<p><strong>Where:</strong> YouTube data is fetched from Google when the app is open and held in memory for display; thumbnails are cached on the device. Your favorites and watch history of recordings are kept only on the device. Nothing is copied to any server of ours. When you sign out or delete the app, it is gone from the device.</p>
+
+<h3>1.4 Camera and microphone during a stream</h3>
+<p>When you start a stream, the app captures video and audio — or plays the video files you picked — and sends them directly from your phone to YouTube’s ingestion servers (RTMP). The app does not record, store or analyse this content. The recording that appears on YouTube afterwards is created and stored by YouTube under your account.</p>
+<p><strong>Voice on the Finish form.</strong> When you tap the microphone on the form shown after a stream (“Tell about the stream”), the app listens until you tap Done or Cancel. Your speech is converted to text on your iPhone by Apple’s on-device speech recognition, and the title and notes are written from that text by the AI model built into the iPhone (Apple Intelligence). The audio and the text are not sent to us or to any other service, are not stored, and are used only to fill in the form; nothing is uploaded until you save the title and notes to your stream on YouTube. Speech-recognition permission is asked for the first time you use it.</p>
+<p><strong>Voice over a video from your library.</strong> When you stream a video from your library and turn on the microphone to speak over it, what you say goes on air as part of the stream, and the iPhone also turns it into text with its on-device speech recognition. When the stream ends, the app offers a title and notes written from that text by Apple Intelligence, or your words as said for the notes. The text is not sent to us or to any other service and is not stored; nothing is saved to YouTube unless you choose Use and then save.</p>
+<p><strong>Sound control.</strong> If you turn on Settings → Sound control (it is off by default), the app listens to the microphone while it is open on the main screen or the camera screen, to notice snaps or claps that start, pause or stop a stream. It only measures how loud the sound is, moment by moment, on your device; the audio is not recorded, not stored and not sent to anyone. Turn the setting off and the app does not listen outside a stream.</p>
+<p><strong>Your subscribers’ e-mail addresses.</strong> If you make a list of subscribers (Settings → Subscribers), the addresses you type in or pick from your contacts are kept only on your device. The system contact picker hands the app only the one address you choose; the app does not read your contacts. The app does not send e-mail itself: when you send a recording to your subscribers, your own mail app opens with the message, and you send it from your own address.</p>
+
+<h3>1.5 Location</h3>
+<p>With your permission, the app uses your current location once, when you create a stream, to pre-fill the stream description with a street address. You can edit or delete this text before saving. The address becomes part of the stream’s description on YouTube; the app does not store location data and does not use it for anything else, including clips and videos. Location is used only while the app is open (“When In Use”), and the app works without it.</p>
+
+<h3>1.6 Notifications, alarms and calendar</h3>
+<p>With your permission, the app schedules local notifications on your device — for example, when someone in your group goes live. They are generated on the device; no push-notification service is involved.</p>
+<p>If you turn on Settings → Wake me for my streams (off by default), the app sets an alarm on your device for the start of your own scheduled stream (iOS 26 or later, with your permission). The alarm is kept by iOS on your device and is removed when the stream is cancelled or the setting is turned off.</p>
+<p>Add to Calendar opens your device’s own event editor with the stream’s title and time filled in; you decide whether to save the event. The app does not read your calendar.</p>
+
+<h2>2. Information we collect</h2>
+<p><strong>None.</strong> We have no backend, database, analytics, advertising, crash-reporting or tracking SDKs. The app sends no data to us and no data to any third party other than Google as described in this policy. We cannot see who uses the app, what they film or stream, or where they are. Purchases are handled by Apple through the App Store; we receive no personal information from them.</p>
+
+<h2>3. How information is shared</h2>
+<p>Only what you stream is shared, and with exactly one party: <strong>Google</strong> (Google Sign-In, YouTube Data API, YouTube live ingestion and playback). Google’s handling of your data is governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Your clips and videos are not shared with anyone. We do not sell, rent or transfer your data to anyone, and we have nothing to transfer.</p>
+
+<h2>4. Data retention and deletion</h2>
+<ul>
+  <li><strong>Clips and videos:</strong> stay on your iPhone until you remove them in the app (Remove Clip, Delete Video) or delete the app. Clips you saved to Photos stay in Photos.</li>
+  <li><strong>Account data on your device:</strong> tokens, profile details and cached thumbnails are removed when you sign out (side menu → Log Out) or delete the app; the app’s settings and the anonymous phone ID are removed when you delete the app.</li>
+  <li><strong>On YouTube:</strong> streams and recordings belong to your channel, not to the app. Delete them in the app or in <a href="https://studio.youtube.com">YouTube Studio</a>; deletion is performed in your YouTube account and is final.</li>
+  <li><strong>With us:</strong> there is nothing to retain or delete, because we hold no data.</li>
+</ul>
+
+<h2>5. Your choices and controls</h2>
+<ul>
+  <li><strong>Revoke the app’s access</strong> to your Google account at any time at <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>. The app then can no longer act on your channel; your clips and videos stay on the phone.</li>
+  <li><strong>Sign out</strong> in the app’s side menu to remove tokens and profile data from your device.</li>
+  <li><strong>Camera, microphone, photos, location, speech recognition, alarms and notifications</strong> permissions can be changed at any time in iOS Settings → Emdalex Studio.</li>
+  <li><strong>Privacy of your streams:</strong> new streams are <em>unlisted</em> by default; you choose private, unlisted or public for each stream.</li>
+</ul>
+
+<h2>6. Google API Services — Limited Use</h2>
+<p>Emdalex Studio’s use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes">Google API Services User Data Policy</a>, including the Limited Use requirements. Google user data is used only to provide the user-facing streaming features described above; it is never used for advertising, never sold, never used to train models, and never transferred to anyone except as necessary to provide those features, to comply with the law, or as part of a merger or acquisition with notice to users. Humans never read it, because no copy of it ever reaches us.</p>
+
+<h2>7. Security</h2>
+<p>All communication with Google uses HTTPS. Tokens are kept in the iOS Keychain, and clips and videos in the app’s storage, both protected by the device lock and iOS security. Because there is no server, there is no server-side data that could be breached.</p>
+
+<h2>8. Children</h2>
+<p>The app is made for families, but it is used by the adult who signs in: it requires a Google account that meets Google’s age requirements and is not directed at children under 13. We knowingly collect no information from anyone, including children.</p>
+
+<h2>9. Changes to this policy</h2>
+<p>If this policy changes — for example, when an Android version is released or a new feature uses your data — the updated version is published at this address with a new effective date. Material changes are also noted in the app’s release notes.</p>
+
+<h2>10. Contact</h2>
+<p>Questions about this policy or about your data: <a href="mailto:sergey.krotkih@gmail.com">sergey.krotkih@gmail.com</a>. This app is developed and published by Serhii Krotkykh, Kharkiv, Ukraine.</p>
+
+</body>
+</html>
