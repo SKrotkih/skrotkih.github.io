@@ -50,6 +50,8 @@
   <li><a href="#cover">The video's cover</a></li>
   <li><a href="#reorder">Put clips in order</a></li>
   <li><a href="#video-settings">Video settings</a></li>
+  <li><a href="#assemble">Assemble and share the video</a></li>
+  <li><a href="#add-music">How to add music to a video</a></li>
   <li><a href="#streams">Streams</a></li>
   <li><a href="#faq">Questions and problems</a></li>
   <li><a href="#revoke-access">Remove the app's access to your Google Account</a></li>
@@ -86,40 +88,73 @@
 <p>Short clips are easier to put together than one long recording: film one moment at a time.</p>
 
 <h2 id="edit-clip">Edit Clip — trim and cut</h2>
-<p>Edit Clip shows the clip as a strip of frames, about one every half second. Nothing changes in the original until you save.</p>
+<p>Edit Clip shows the clip as a strip of frames, about one every half second. The recorded file itself is never cut: the app only remembers which parts you keep.</p>
 <dl>
   <dt><strong>Trim the start and the end</strong></dt>
-  <dd>Drag the yellow handles at the two ends of the strip. They move frame by frame; what is left outside them is dimmed. Above the strip you see the <em>Original</em> and <em>Trimmed</em> length, under it the current second. Drag a handle to the edge of the screen and the strip scrolls by itself.</dd>
+  <dd>Drag the yellow handles at the two ends of the strip. They move frame by frame; what is left outside them is dimmed. Above the strip you see the length, for example <em>Duration 8.4 s of 15.0 s</em> (what you keep, of the whole clip), under it the current second. Drag a handle to the edge of the screen and the strip scrolls by itself.</dd>
   <dt><strong>Look at a frame</strong></dt>
   <dd>Tap a frame: it gets a white frame and is shown big below the strip. Press and hold, then move your finger, to scrub through the clip.</dd>
   <dt><strong>Cut out a moment in the middle</strong></dt>
   <dd>Double-tap a frame to zoom into it: you see every picture inside it and blue handles. Use them to cut out a bit anywhere; a blue line under the frame shows it was edited.</dd>
+  <dt><strong>Cut out a longer part</strong></dt>
+  <dd>Tap the scissors left of <kbd>Play</kbd>: a red selection appears on the strip. Move its red handles over the part to remove and tap <kbd>Delete</kbd>. A cut part is shown dark with red scissors; tap it → <kbd>Restore</kbd> to bring it back.</dd>
   <dt><strong>Watch the result</strong></dt>
   <dd>Tap <kbd>Play</kbd> at the bottom: only the part you keep plays, the strip follows along and the red slider shows where you are.</dd>
   <dt><strong>The <kbd>⋯</kbd> menu</strong></dt>
   <dd><kbd>Save to video</kbd> · <kbd>Save to Photos</kbd> (the trimmed result goes to your photo library) · <kbd>Retake</kbd> (film the clip again) · <kbd>Undo all changes</kbd>. <kbd>Back</kbd> and <kbd>Retake</kbd> warn you before your changes are lost.</dd>
-  <dt><strong>Name</strong></dt>
-  <dd>The field at the top, up to 60 characters. For a clip that is already in a video, <kbd>Save</kbd> replaces it with the edited one, or only renames it if you changed nothing else.</dd>
+  <dt><strong>Nothing is lost</strong></dt>
+  <dd>For a clip that is already in a video, <kbd>Save</kbd> keeps your changes at once. Open it in Edit Clip again any time: the handles and cuts are where you left them, and <kbd>Undo all changes</kbd> brings back the whole clip.</dd>
 </dl>
 
 <h2 id="video">Build a video</h2>
 <ol>
-  <li>On <strong>Videos</strong> tap <kbd>+</kbd> (or <kbd>Create</kbd> → <kbd>New video</kbd>).</li>
-  <li>Type the <strong>Name</strong> at the top — it is required; an empty name is outlined in red.</li>
-  <li>Add clips: <kbd>From Camera</kbd> records a new one, <kbd>From Library</kbd> takes videos you already have in Photos. Later the same is in <kbd>⋯</kbd> → <kbd>Add Clip from Camera</kbd> / <kbd>Add Clip from Library</kbd>; whatever you add here goes into this video without asking.</li>
-  <li>Tap <kbd>⋯</kbd> → <kbd>Save</kbd> to keep the name.</li>
+  <li>On <strong>Videos</strong> tap <kbd>+</kbd> (or <kbd>Create</kbd> → <kbd>New video</kbd>). The <em>Video Builder</em> opens.</li>
+  <li>Type the <strong>Title</strong> at the top — it is required (an empty title is outlined in red) and becomes the video's title on YouTube: up to 100 characters, without <code>&lt;</code> and <code>&gt;</code>.</li>
+  <li>Add clips with the red <kbd>+</kbd> in the bar at the bottom: <kbd>From Camera</kbd> records a new one, <kbd>From Library</kbd> takes videos you already have in Photos. An empty video shows the same two buttons in the middle.</li>
+  <li>Tap <kbd>Save</kbd> in the header to keep a changed title. Clips, the cover and the settings are saved at once.</li>
 </ol>
-<p>The clips are listed in the order of the story. Tap a clip to play it; <kbd>⋯</kbd> on its row → <kbd>Edit Clip</kbd>, <kbd>Play Clip</kbd> or <kbd>Remove Clip</kbd> (swipe left removes it too; the app asks first).</p>
-<div class="note"><strong>Coming next:</strong> <kbd>⋯</kbd> → <kbd>Assemble Video</kbd> will put all the clips together into one finished video. In this version it shows what is planned and does not make a file yet.</div>
+<p>The clips are listed in the order of the story, each with its picture and length. Tap a clip to play it. <kbd>Edit</kbd> on its row opens <a href="#edit-clip">Edit Clip</a>: trim the ends or cut parts out — nothing is lost, the recorded file stays whole, and <kbd>Undo all changes</kbd> brings everything back, even after saving. Swipe a row left to remove the clip (the app asks first).</p>
+<p>The bar at the bottom: <kbd>Clips</kbd> (this list) · <kbd>+</kbd> (add a clip) · <kbd>Assemble</kbd> (put the clips together, see <a href="#assemble">below</a>).</p>
 
 <h2 id="cover">The video's cover</h2>
-<p>Tap <kbd>Thumbnail</kbd> under the name and pick one photo from your library. The app makes it the shape and size YouTube expects (16:9, 1280×720) and shows it in place of the icon. Tap the cover to see it full screen — pinch to zoom, double-tap for 1× / 2.5× — and <kbd>Update</kbd> to choose another photo. To remove it, press and hold the cover → <kbd>Remove Thumbnail</kbd>.</p>
+<p>Tap <kbd>Thumbnail</kbd> under the title and pick a photo from your library. The app makes it the shape and size YouTube expects (16:9, 1280×720). Tap the cover to open the editor: background, more photos, text, a frame, filters and masks; <kbd>Save</kbd> in the header keeps it. To remove the cover, press and hold the row → <kbd>Remove Thumbnail</kbd>.</p>
 
 <h2 id="reorder">Put clips in order</h2>
-<p>With two clips or more, tap <kbd>⋯</kbd> → <kbd>Reorder Clips</kbd>. Each row gets a blue handle: drag a clip by it to its place — the order is saved as soon as you let go. Tap <kbd>Done</kbd> when you are finished.</p>
+<p>With two clips or more, tap <kbd>Reorder</kbd> above the list. Each row gets a <kbd>Drag</kbd> handle: drag a clip by it to its place — the order is saved as soon as you let go. Tap <kbd>Done</kbd> when you are finished.</p>
 
 <h2 id="video-settings">Video settings</h2>
-<p><kbd>More</kbd> (the gear) under the name opens <em>Video settings</em>: the transition between clips and its length, and the frame rate. They are saved at once and will be used when the video is assembled.</p>
+<p><kbd>More</kbd> (the gear) under the title opens <em>Video settings</em>: the transition between clips and its length, and the frame rate. They are saved at once and used when the video is assembled.</p>
+
+<h2 id="assemble">Assemble and share the video</h2>
+<ol>
+  <li>Tap <kbd>Assemble</kbd>. The player plays the whole video at once, with the transitions — nothing is made yet.</li>
+  <li>Tap <kbd>Export Video</kbd>. The app makes one video file (16:9, 720p or 1080p) and keeps it on this iPhone. Keep the app open until it is done; <kbd>Cancel</kbd> stops it.</li>
+  <li>Tap <kbd>Save or Stream</kbd>. On <em>Exported Video</em>:
+    <ul>
+      <li><strong>Sound</strong> → <kbd>Add Sound</kbd> — music or your voice over the video (<a href="#add-music">how</a>);</li>
+      <li><kbd>Save to Photos</kbd> — a copy in your photo library;</li>
+      <li><kbd>Save to YouTube</kbd> — uploads it to your channel;</li>
+      <li><kbd>Stream Now</kbd> — goes live with this video right away;</li>
+      <li><kbd>Schedule Stream</kbd> — goes live with it at the time you choose.</li>
+    </ul>
+  </li>
+</ol>
+<p>Changed something after exporting — a clip, the order, the settings or the sound? The app shows that the export is out of date: tap <kbd>Export Again</kbd>.</p>
+<p><strong>Video info</strong> on the Assemble screen shows how much space the video takes on this iPhone. <kbd>Clean</kbd> deletes the exported file to free that space; the clips stay, the video can be exported again, and a copy saved to Photos stays in Photos.</p>
+
+<h2 id="add-music">How to add music to a video</h2>
+<p>Music and voiceovers are added to a finished video: <kbd>Videos</kbd> → a video → <kbd>Assemble</kbd> → <kbd>Save or Stream</kbd> → <strong>Sound</strong> → <kbd>Add Sound</kbd>. The app takes a music file from the <em>Files</em> app, so the song has to be there first.</p>
+<dl>
+  <dt><strong>Free music</strong></dt>
+  <dd>In <em>Add Sound</em> tap <kbd>Find Free Music</kbd> — it opens Pixabay Music. Pick a song and tap <kbd>Download</kbd>: it is saved to <em>Files</em> → <em>Downloads</em>. Close the browser, tap <kbd>Add Music from Files</kbd> → <em>Downloads</em> → the song.</dd>
+  <dt><strong>Your own music file</strong></dt>
+  <dd>Save it to the <em>Files</em> app first: AirDrop it from a Mac (it goes to <em>Downloads</em>), put it in iCloud Drive, or in Mail, Messages, Telegram or WhatsApp tap <kbd>Share</kbd> → <kbd>Save to Files</kbd>.</dd>
+  <dt><strong>A recording from Voice Memos</strong></dt>
+  <dd><kbd>Share</kbd> → <kbd>Save to Files</kbd>, then add it with <kbd>Add Music from Files</kbd>.</dd>
+  <dt><strong>Which files work</strong></dt>
+  <dd>MP3, M4A/AAC, WAV and AIFF. Songs from Apple Music and copy-protected iTunes purchases cannot be added.</dd>
+</dl>
+<div class="note"><strong>Rights:</strong> use only music you made or that is free to use. On YouTube, someone else's music can get the video muted, blocked or claimed (Content ID). Free music sites have their own license: check it before you use a track. Some Pixabay songs are registered with Content ID — such a claim does not remove the video, the ad money goes to the song's author. On a computer, YouTube's own Audio Library (studio.youtube.com → <em>Audio Library</em>) is a source that Content ID does not claim.</div>
 
 <h2 id="streams">Streams</h2>
 <p>Emdalex Studio can also go live on your own YouTube channel — for a family event, a match or a lesson. The recording stays on YouTube and takes no space on your phone.</p>
