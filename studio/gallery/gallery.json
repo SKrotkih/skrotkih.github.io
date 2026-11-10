@@ -1,0 +1,222 @@
+{
+ "version": 1,
+ "images": [
+  {
+   "id": "flowers",
+   "title": "Flowers",
+   "items": [
+    {
+     "id": "flowers/flowers-01",
+     "title": "Red Tulips",
+     "file": "images/flowers/flowers-01.jpg",
+     "thumb": "images/flowers/thumbs/flowers-01.jpg",
+     "width": 2560,
+     "height": 1626,
+     "author": "Benny Jackson themightymerlin",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Luxurious_red_tulips_(Unsplash).jpg"
+    },
+    {
+     "id": "flowers/flowers-02",
+     "title": "Big Sunflower",
+     "file": "images/flowers/flowers-02.jpg",
+     "thumb": "images/flowers/thumbs/flowers-02.jpg",
+     "width": 2560,
+     "height": 1707,
+     "author": "HLI-Photography",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Big_Sunflower_waiting_for_a_Visitor.jpg"
+    },
+    {
+     "id": "flowers/flowers-03",
+     "title": "Red Roses",
+     "file": "images/flowers/flowers-03.jpg",
+     "thumb": "images/flowers/thumbs/flowers-03.jpg",
+     "width": 2560,
+     "height": 1706,
+     "author": "Jesselikesweather",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Red_Roses_in_Florida.jpg"
+    },
+    {
+     "id": "flowers/flowers-04",
+     "title": "White Daisy",
+     "file": "images/flowers/flowers-04.jpg",
+     "thumb": "images/flowers/thumbs/flowers-04.jpg",
+     "width": 1980,
+     "height": 1289,
+     "author": "Bessi 909086",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Marguerite_Daisy_Flower_White_Beautiful_Beauty.jpg"
+    },
+    {
+     "id": "flowers/flowers-05",
+     "title": "Colorful Gerbera Daisies",
+     "file": "images/flowers/flowers-05.jpg",
+     "thumb": "images/flowers/thumbs/flowers-05.jpg",
+     "width": 2183,
+     "height": 1581,
+     "author": "David Condrey",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Flower_Bouquet-2.jpg"
+    },
+    {
+     "id": "flowers/flowers-06",
+     "title": "Cherry Blossom",
+     "file": "images/flowers/flowers-06.jpg",
+     "thumb": "images/flowers/thumbs/flowers-06.jpg",
+     "width": 2560,
+     "height": 1706,
+     "author": "Hyunjung Kim",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Cherry_blossom_2.jpg"
+    }
+   ]
+  },
+  {
+   "id": "dolls",
+   "title": "Dolls",
+   "items": [
+    {
+     "id": "dolls/dolls-01",
+     "title": "Matryoshka Dolls",
+     "file": "images/dolls/dolls-01.jpg",
+     "thumb": "images/dolls/thumbs/dolls-01.jpg",
+     "width": 2560,
+     "height": 1676,
+     "author": "Wilfredor",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Matryoshka_from_Hungary.jpg"
+    },
+    {
+     "id": "dolls/dolls-02",
+     "title": "Knitted Rag Doll",
+     "file": "images/dolls/dolls-02.jpg",
+     "thumb": "images/dolls/thumbs/dolls-02.jpg",
+     "width": 1600,
+     "height": 1200,
+     "author": "Petey21",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Knitted_rag_doll.jpg"
+    },
+    {
+     "id": "dolls/dolls-03",
+     "title": "Doll Collection",
+     "file": "images/dolls/dolls-03.jpg",
+     "thumb": "images/dolls/thumbs/dolls-03.jpg",
+     "width": 2560,
+     "height": 1706,
+     "author": "Edelmauswaldgeist",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Spielzeugmuseum_M%C3%BCnchen_18.jpg"
+    },
+    {
+     "id": "dolls/dolls-04",
+     "title": "Porcelain Doll",
+     "file": "images/dolls/dolls-04.jpg",
+     "thumb": "images/dolls/thumbs/dolls-04.jpg",
+     "width": 2560,
+     "height": 1920,
+     "author": "Jorcoga",
+     "license": "Public Domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Porcelain_doll.jpeg"
+    },
+    {
+     "id": "dolls/dolls-05",
+     "title": "Folk Dolls",
+     "file": "images/dolls/dolls-05.jpg",
+     "thumb": "images/dolls/thumbs/dolls-05.jpg",
+     "width": 2560,
+     "height": 1920,
+     "author": "Daderot",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Udmurt_dolls_-_Museum_of_Cultures_(Helsinki)_-_DSC04769.JPG"
+    },
+    {
+     "id": "dolls/dolls-06",
+     "title": "Doll in a Box",
+     "file": "images/dolls/dolls-06.jpg",
+     "thumb": "images/dolls/thumbs/dolls-06.jpg",
+     "width": 2560,
+     "height": 1962,
+     "author": "Unknown",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Doll_in_box_MET_DP-14471-001.jpg"
+    }
+   ]
+  },
+  {
+   "id": "toy-cars",
+   "title": "Toy Cars",
+   "items": [
+    {
+     "id": "toy-cars/toy-cars-01",
+     "title": "Red Toy Car",
+     "file": "images/toy-cars/toy-cars-01.jpg",
+     "thumb": "images/toy-cars/thumbs/toy-cars-01.jpg",
+     "width": 2560,
+     "height": 1704,
+     "author": "Jebulon",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Red_car_toy.jpg"
+    },
+    {
+     "id": "toy-cars/toy-cars-02",
+     "title": "Yellow Toy Car",
+     "file": "images/toy-cars/toy-cars-02.jpg",
+     "thumb": "images/toy-cars/thumbs/toy-cars-02.jpg",
+     "width": 2560,
+     "height": 1704,
+     "author": "Jebulon",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Yellow_toy_car.jpg"
+    },
+    {
+     "id": "toy-cars/toy-cars-03",
+     "title": "Grey Toy Car",
+     "file": "images/toy-cars/toy-cars-03.jpg",
+     "thumb": "images/toy-cars/thumbs/toy-cars-03.jpg",
+     "width": 2560,
+     "height": 1704,
+     "author": "Jebulon",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Grey_toy_car.jpg"
+    },
+    {
+     "id": "toy-cars/toy-cars-04",
+     "title": "Vintage Toy Car",
+     "file": "images/toy-cars/toy-cars-04.jpg",
+     "thumb": "images/toy-cars/thumbs/toy-cars-04.jpg",
+     "width": 2560,
+     "height": 1152,
+     "author": "Aarti Surana",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Vintage_toy_car.jpg"
+    },
+    {
+     "id": "toy-cars/toy-cars-05",
+     "title": "Tin Toy Car",
+     "file": "images/toy-cars/toy-cars-05.jpg",
+     "thumb": "images/toy-cars/thumbs/toy-cars-05.jpg",
+     "width": 2560,
+     "height": 1545,
+     "author": "Alf van Beem",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Speelgoedmuseum_Deventer,_tin_toy_car,_pic1.JPG"
+    },
+    {
+     "id": "toy-cars/toy-cars-06",
+     "title": "Toy Truck in the Sand",
+     "file": "images/toy-cars/toy-cars-06.jpg",
+     "thumb": "images/toy-cars/thumbs/toy-cars-06.jpg",
+     "width": 2560,
+     "height": 1706,
+     "author": "W.carter",
+     "license": "CC0",
+     "source": "https://commons.wikimedia.org/wiki/File:Plastic_toy_truck_and_pail_in_sand.jpg"
+    }
+   ]
+  }
+ ],
+ "music": []
+}
