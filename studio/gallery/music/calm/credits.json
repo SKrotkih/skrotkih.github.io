@@ -1,0 +1,32 @@
+{
+ "calm-01.m4a": {
+  "title": "Satie: Gymnopédie No. 1",
+  "author": "Robin Alciatore",
+  "license": "Public Domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Erik_Satie_-_gymnopedies_-_la_1_ere._lent_et_douloureux.ogg"
+ },
+ "calm-02.m4a": {
+  "title": "Debussy: Clair de lune",
+  "author": "Laurens Goedhart",
+  "license": "Public Domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg"
+ },
+ "calm-03.m4a": {
+  "title": "Bach: Air on the G String",
+  "author": "United States Air Force Band, Air Force Strings",
+  "license": "Public Domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Air_-_Air_Force_Strings_-_United_States_Air_Force_Band.mp3"
+ },
+ "calm-04.m4a": {
+  "title": "Chopin: Nocturne Op. 9 No. 2",
+  "author": "Frank Lévy",
+  "license": "Public Domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Chopin_-_Nocturne_No._2_in_E-flat_major,_Op._9_No._2_(Frank_Levy).flac"
+ },
+ "calm-05.m4a": {
+  "title": "Schumann: Träumerei",
+  "author": "Unknown (Musopen)",
+  "license": "Public Domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Robert_Schumann_-_scenes_from_childhood,_op._15_-_vii._dreaming.ogg"
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "happy-01.m4a": {
+  "title": "Joplin: The Entertainer",
+  "author": "Gnissah",
+  "license": "Public Domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Scott_Joplin_-_The_Entertainer_(1902).ogg"
+ },
+ "happy-02.m4a": {
+  "title": "Joplin: Maple Leaf Rag",
+  "author": "United States Air Force Band, Strolling Strings",
+  "license": "Public Domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Maple_Leaf_Rag_-_Strolling_Strings_-_United_States_Air_Force_Band.mp3"
+ },
+ "happy-03.m4a": {
+  "title": "Mozart: Eine kleine Nachtmusik, I. Allegro",
+  "author": "Unknown (Musopen)",
+  "license": "Public Domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Mozart_K525_Serenade_in_G_Major_1_-_Allegro.ogg"
+ },
+ "happy-04.m4a": {
+  "title": "Vivaldi: Spring, I. Allegro",
+  "author": "The Modena Chamber Orchestra",
+  "license": "Public Domain",
+  "source": "https://commons.wikimedia.org/wiki/File:The_Modena_Chamber_Orchestra_-_Vivaldi%27s_Spring,_RV_269_-_I._Allegro.ogg"
+ }
+}

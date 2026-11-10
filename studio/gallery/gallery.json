@@ -218,5 +218,99 @@
    ]
   }
  ],
- "music": []
+ "music": [
+  {
+   "id": "calm",
+   "title": "Calm",
+   "items": [
+    {
+     "id": "calm/calm-01",
+     "title": "Satie: Gymnopédie No. 1",
+     "file": "music/calm/calm-01.m4a",
+     "duration": 183.6,
+     "author": "Robin Alciatore",
+     "license": "Public Domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Erik_Satie_-_gymnopedies_-_la_1_ere._lent_et_douloureux.ogg"
+    },
+    {
+     "id": "calm/calm-02",
+     "title": "Debussy: Clair de lune",
+     "file": "music/calm/calm-02.m4a",
+     "duration": 304.1,
+     "author": "Laurens Goedhart",
+     "license": "Public Domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg"
+    },
+    {
+     "id": "calm/calm-03",
+     "title": "Bach: Air on the G String",
+     "file": "music/calm/calm-03.m4a",
+     "duration": 183.3,
+     "author": "United States Air Force Band, Air Force Strings",
+     "license": "Public Domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Air_-_Air_Force_Strings_-_United_States_Air_Force_Band.mp3"
+    },
+    {
+     "id": "calm/calm-04",
+     "title": "Chopin: Nocturne Op. 9 No. 2",
+     "file": "music/calm/calm-04.m4a",
+     "duration": 271.5,
+     "author": "Frank Lévy",
+     "license": "Public Domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Chopin_-_Nocturne_No._2_in_E-flat_major,_Op._9_No._2_(Frank_Levy).flac"
+    },
+    {
+     "id": "calm/calm-05",
+     "title": "Schumann: Träumerei",
+     "file": "music/calm/calm-05.m4a",
+     "duration": 203.0,
+     "author": "Unknown (Musopen)",
+     "license": "Public Domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Robert_Schumann_-_scenes_from_childhood,_op._15_-_vii._dreaming.ogg"
+    }
+   ]
+  },
+  {
+   "id": "happy",
+   "title": "Happy",
+   "items": [
+    {
+     "id": "happy/happy-01",
+     "title": "Joplin: The Entertainer",
+     "file": "music/happy/happy-01.m4a",
+     "duration": 215.5,
+     "author": "Gnissah",
+     "license": "Public Domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Scott_Joplin_-_The_Entertainer_(1902).ogg"
+    },
+    {
+     "id": "happy/happy-02",
+     "title": "Joplin: Maple Leaf Rag",
+     "file": "music/happy/happy-02.m4a",
+     "duration": 125.3,
+     "author": "United States Air Force Band, Strolling Strings",
+     "license": "Public Domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Maple_Leaf_Rag_-_Strolling_Strings_-_United_States_Air_Force_Band.mp3"
+    },
+    {
+     "id": "happy/happy-03",
+     "title": "Mozart: Eine kleine Nachtmusik, I. Allegro",
+     "file": "music/happy/happy-03.m4a",
+     "duration": 252.6,
+     "author": "Unknown (Musopen)",
+     "license": "Public Domain",
+     "source": "https://commons.wikimedia.org/wiki/File:Mozart_K525_Serenade_in_G_Major_1_-_Allegro.ogg"
+    },
+    {
+     "id": "happy/happy-04",
+     "title": "Vivaldi: Spring, I. Allegro",
+     "file": "music/happy/happy-04.m4a",
+     "duration": 214.0,
+     "author": "The Modena Chamber Orchestra",
+     "license": "Public Domain",
+     "source": "https://commons.wikimedia.org/wiki/File:The_Modena_Chamber_Orchestra_-_Vivaldi%27s_Spring,_RV_269_-_I._Allegro.ogg"
+    }
+   ]
+  }
+ ]
 }
