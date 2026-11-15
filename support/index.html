@@ -36,6 +36,7 @@
   <b>Using the app</b>
   <a href="/dashboard/">Web dashboard</a>
   <a href="/support/share-video/">Share a video</a>
+  <a href="/support/sound-control/">Sound control</a>
   <a href="/support/channel/">Your own YouTube channel</a>
   <a href="/support/group/">A channel for your group</a>
   <a href="/support/open-from-youtube/">Open from YouTube</a>
@@ -57,6 +58,7 @@
   <li><a href="#schedule">Schedule a stream</a></li>
   <li><a href="#stream-form">The stream form, field by field</a></li>
   <li><a href="#pause">Pause a stream</a></li>
+  <li><a href="/support/sound-control/">Control the app with snaps or claps</a></li>
   <li><a href="#from-file">Stream videos from your library</a></li>
   <li><a href="/support/share-video/">Share a video from Photos or Gallery</a></li>
   <li><a href="#finish">Finish a stream</a></li>
@@ -138,6 +140,9 @@
 <h2 id="pause">Pause a stream</h2>
 <p>YouTube has no pause, so the app makes one. On air, tap <kbd>Pause</kbd> (left of the stop button): viewers see a black screen saying <em>Paused — back soon</em> and hear nothing; the camera and the microphone are off. The stream itself goes on — the timer keeps counting, and the stream length limit too (90 minutes unless raised in Settings). Tap <kbd>Resume</kbd> and the camera is back in the same stream; the recording on YouTube is one video with the pause in it. To end the stream, resume first. Pause works for camera streams.</p>
 
+<h3 id="sound-control">Start, pause and stop with snaps or claps</h3>
+<p>Phone on a tripod a few steps away? Turn on side menu → <kbd>Settings</kbd> → <em>Sound control</em> (off by default), then snap your fingers or clap in an even rhythm, about half a second apart: <strong>three times</strong> on the main screen to start a stream, <strong>three times</strong> on the camera screen to stop it, <strong>twice</strong> on air to pause or resume. Two notes going up mean the app is doing it. <a href="/support/sound-control/">Control the app with snaps or claps</a></p>
+
 <h2 id="schedule">Schedule a stream</h2>
 <ol>
   <li>Open the <strong>Scheduled</strong> tab and tap <kbd>+</kbd> in the header (or <kbd>Schedule a stream</kbd> when the list is empty).</li>
@@ -206,15 +211,32 @@
   <li>The app connects to YouTube showing the first frame of the first video. As soon as you are on air, the videos play from the very beginning, one after another, with 3 seconds of black screen between them.</li>
   <li>When the last video ends, the stream finishes by itself.</li>
 </ol>
+<p id="voice-over"><strong>Speak over the video.</strong> Tap the microphone button on the left of the stop button (it is there from the moment the app connects): it turns red, viewers hear your voice, and the video's own sound goes down to half. Tap it again to stop speaking. Your voice is heard in the black gaps between videos too. The first time, the phone asks to allow the microphone. The video's sound is not played aloud on your phone — wear headphones if you want to hear what you are talking over.</p>
+<p id="voice-over-title"><strong>On iPhone, what you say becomes the title and notes.</strong> While the microphone is on, the iPhone turns your words into text as you speak. When the stream ends, the Finish form shows <em>From what you said</em> — a title and notes written from your words. Tap <kbd>Use</kbd> to put them in the fields, then change anything you like; without <kbd>Use</kbd> nothing changes. The title and notes are written by Apple Intelligence where the iPhone has it; on other iPhones your words go into the notes as you said them, and the title stays as it is. Everything happens on the iPhone: nothing is sent anywhere or kept. The first time, iPhone asks to allow Speech Recognition.</p>
 <p>The first video sets the shape of the stream (upright or sideways); videos of another shape are shown with black bars. A stream runs at most 90 minutes (or the longer limit set in Settings), so the app takes the videos in order while they fit — one long video is always taken (the stream simply stops at the limit); the rest are left out and the app tells you. On Android a video whose sound is recorded differently from the first one's plays without sound — the app tells you that too.</p>
 
 <h2 id="finish">Finish a stream</h2>
 <ol>
   <li>Tap the round stop button at the bottom of the camera screen (or <kbd>Finish stream</kbd> on the <strong>Live</strong> tab).</li>
-  <li>The stream stops and is saved on your YouTube channel. A form opens where you can change the <strong>Title</strong>, the <strong>Notes</strong>, the <strong>Category</strong> and the <strong>Thumbnail</strong> (from your library or a new photo). Tap <kbd>Done</kbd> — your changes are saved; leave the thumbnail as it is and the app picks a frame from the video. The form also closes by itself after a minute.</li>
+  <li>The stream stops and is saved on your YouTube channel. A form opens where you can change the <strong>Title</strong>, the <strong>Notes</strong>, the <strong>Category</strong> and the <strong>Thumbnail</strong> (from your library or a new photo) — or just <a href="#voice">say what the stream was about</a>. Tap <kbd>Done</kbd> — your changes are saved; leave the thumbnail as it is and the app picks a frame from the video. The form also closes by itself after a minute.</li>
   <li>The recording appears on the <strong>Completed</strong> tab a moment later.</li>
 </ol>
 <p>If the connection drops, the app keeps trying for a while; if the video does not get through, YouTube ends the stream and the app tells you.</p>
+
+<h3 id="voice">Tell about the stream by voice</h3>
+<p>No need to type on the Finish form. Tap <kbd>Tell about the stream</kbd> (the red microphone at the top of the form) and speak:</p>
+<ol>
+  <li>Say the title first — for example <em>“Copenhagen, May 2026”</em> — then pause and tell what happened: <em>“Me and my son are walking around the Marina yacht club.”</em> Your words appear on the screen as you speak.</li>
+  <li>Tap <kbd>Done</kbd>. In a moment the <strong>Title</strong>, the <strong>Notes</strong> and, when it is clear, the <strong>Category</strong> are filled in, replacing what was there.</li>
+  <li>Read them, change anything you like, and tap <kbd>Done</kbd> on the form.</li>
+</ol>
+<p><kbd>Cancel</kbd> leaves the form as it was. Recording stops by itself after a minute. While you speak, the form does not close by itself.</p>
+<p><strong>Everything happens on your phone.</strong> Your voice is turned into text by the phone itself, and the title and notes are written by the AI model built into the phone — Apple's on iPhone, Google's Gemini Nano on Android. Nothing is sent to us or to any AI service, and nothing is stored.</p>
+<ul>
+  <li><strong>iPhone:</strong> the title and notes are written by Apple Intelligence (iPhone 15 Pro or later, with Apple Intelligence turned on). On other iPhones your words go into the Notes as you said them and the first phrase becomes the title — that is why it helps to say the title first. The first time, iPhone asks to allow Speech Recognition and the microphone.</li>
+  <li><strong>Android:</strong> Android 12 or later with speech recognition on the device. Phones with Gemini Nano (for example Pixel 9 or later, Galaxy S26) write the title and notes; on the others your words go into the Notes as said and the first phrase becomes the title.</li>
+  <li>Speak the language your phone is set to. No microphone button? Your phone cannot recognize speech in its language without the internet — type as usual.</li>
+</ul>
 
 <h2 id="watch">Watch streams and recordings</h2>
 <ul>
@@ -236,6 +258,19 @@
 <h3 id="categories">Find recordings by category</h3>
 <p>On the <strong>Completed</strong> tab tap <kbd>⋯</kbd> at the top right → <kbd>Categories</kbd>. The categories are shown as buttons above the list: tap one or several, and the list shows only their recordings — tap again to remove one. With none selected, every recording is shown. Each recording shows its category after the date. Search and <kbd>Sort</kbd> work there too; the back arrow returns to all recordings.</p>
 <p>A recording gets its category from the stream form or the finish form; streams started with the <kbd>▶</kbd> button or shared from Photos are <em>Other</em> unless you choose one when you finish. <em>Other</em> is not offered as a filter. Recordings made before categories existed count as <em>Other</em>.</p>
+
+<h3 id="subscribers">Send a recording to your subscribers</h3>
+<p>Keep your own list of people who want to see your streams — family, a team, a class — and send them a finished stream by e-mail in a few taps.</p>
+<ol>
+  <li><strong>Make the list:</strong> side menu → <kbd>Settings</kbd> → <em>Subscribers</em> → <kbd>My subscribers</kbd>. Type an address and tap <kbd>Add</kbd>, or tap <kbd>Choose from Contacts</kbd> and pick a contact (the app sees only the address you pick). To remove an address, swipe it to the left on iPhone or tap <kbd>✕</kbd> on Android.</li>
+  <li><strong>Send:</strong> on the <strong>Completed</strong> tab tap <kbd>⋯</kbd> on your stream → <kbd>Send to subscribers</kbd>. Everyone on the list is ticked — untick whoever should not get it, change the <strong>Subject</strong> if you like (it is the stream's title), and tap <kbd>Send</kbd>.</li>
+  <li>Your mail app opens with the message ready: the title, the link to the recording and its notes. Tap <kbd>Send</kbd> there.</li>
+</ol>
+<ul>
+  <li><strong>The app sends no e-mail itself.</strong> The message goes from your own mail app and your own address, so replies come to you and it does not end up in spam. The addresses go in <em>Bcc</em>: nobody sees the others.</li>
+  <li><strong>Only Unlisted and Public recordings</strong> can be sent — a private one could not be watched by your subscribers. Change it with <kbd>⋯</kbd> → <kbd>Who can watch…</kbd> first.</li>
+  <li>The list is kept only on your phone and is not shared with anyone, other members of a group channel included. On iPhone without the Mail app set up, the app uses the mail app you chose as the default.</li>
+</ul>
 
 <h2 id="notifications">Notifications when a stream starts</h2>
 <p>Emdalex Streams has no server of its own: your phone talks only to YouTube. That keeps your streams between you and YouTube — but it also means nobody can send your phone a message the moment another member goes live. The app has to find out by itself, and an app that is asleep cannot do that at any moment it likes. So the app does what can be done without a server:</p>
