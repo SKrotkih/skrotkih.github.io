@@ -67,7 +67,7 @@
   ],
   "createdAt": "2026-11-17T08:18:39Z",
   "id": "28B1D982-DAB6-4042-B143-109FEC47705B",
-  "name": "Simple Video",
+  "name": "Sample Video",
   "settings": {
    "frameRate": 30,
    "keepsOriginalFrameRate": true,
