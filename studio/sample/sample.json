@@ -1,0 +1,151 @@
+{
+ "version": 1,
+ "project": {
+  "clips": [
+   {
+    "createdAt": "2026-11-17T09:43:03Z",
+    "duration": 8.373714285714286,
+    "fileDuration": 8.375033,
+    "fileName": "18ED2779-594A-4A33-BFDF-FD5481ED0010.mov",
+    "id": "18ED2779-594A-4A33-BFDF-FD5481ED0010",
+    "keptRanges": [
+     {
+      "start": 0,
+      "end": 8.373714285714286
+     }
+    ],
+    "name": "Clip 17 Nov at 11:43"
+   },
+   {
+    "createdAt": "2026-11-17T10:13:09Z",
+    "duration": 16.901666666666667,
+    "fileName": "F6D9D835-09C7-490F-B86A-043E9764BEBF.mov",
+    "id": "F6D9D835-09C7-490F-B86A-043E9764BEBF",
+    "name": "Clip 17 Nov at 12:13",
+    "fileDuration": 16.901678
+   },
+   {
+    "createdAt": "2026-11-18T04:07:45Z",
+    "duration": 3,
+    "fileName": "6C1E0BFB-DE69-4F1A-B3E9-4CD30F3E87C8.mov",
+    "id": "6C1E0BFB-DE69-4F1A-B3E9-4CD30F3E87C8",
+    "name": "Clip 18 Nov at 06:07",
+    "fileDuration": 3.0
+   },
+   {
+    "createdAt": "2026-11-17T10:13:17Z",
+    "duration": 15,
+    "fileName": "1AD1931A-762E-4CD8-AF9F-D744518E3BA4.mov",
+    "id": "1AD1931A-762E-4CD8-AF9F-D744518E3BA4",
+    "name": "Clip 17 Nov at 12:13",
+    "fileDuration": 15.0
+   },
+   {
+    "createdAt": "2026-11-18T04:07:44Z",
+    "duration": 3,
+    "fileName": "F1170E5C-97EB-480E-BE58-EB16B37F2C04.mov",
+    "id": "F1170E5C-97EB-480E-BE58-EB16B37F2C04",
+    "name": "Clip 18 Nov at 06:07",
+    "fileDuration": 3.0
+   },
+   {
+    "createdAt": "2026-11-18T04:07:43Z",
+    "duration": 3,
+    "fileName": "907EBDDC-A6D9-4CCC-B18A-1D94B200292E.mov",
+    "id": "907EBDDC-A6D9-4CCC-B18A-1D94B200292E",
+    "name": "Clip 18 Nov at 06:07",
+    "fileDuration": 3.0
+   },
+   {
+    "createdAt": "2026-11-18T04:07:40Z",
+    "duration": 3,
+    "fileName": "E4720F71-9D06-48F3-9C21-66E6319FF266.mov",
+    "id": "E4720F71-9D06-48F3-9C21-66E6319FF266",
+    "name": "Clip 18 Nov at 06:07",
+    "fileDuration": 3.0
+   }
+  ],
+  "createdAt": "2026-11-17T08:18:39Z",
+  "id": "28B1D982-DAB6-4042-B143-109FEC47705B",
+  "name": "Simple Video",
+  "settings": {
+   "frameRate": 30,
+   "keepsOriginalFrameRate": true,
+   "transition": "slide",
+   "transitionDuration": 0.5
+  },
+  "sound": {
+   "clipsVolume": 0.5,
+   "duckLevel": 0.3,
+   "ducksUnderVoice": true,
+   "music": {
+    "duration": 125.25859410430839,
+    "fadesIn": true,
+    "fadesOut": true,
+    "fileName": "music-2BAB6304-EF90-48F4-B719-38A321C569F3.m4a",
+    "id": "20FD6434-3EE4-49F1-ACB4-59A268CF0489",
+    "loops": true,
+    "title": "Joplin: Maple Leaf Rag"
+   },
+   "musicVolume": 0.5,
+   "voiceVolume": 1,
+   "voices": []
+  },
+  "thumbnailFileName": "thumbnail.jpg",
+  "updatedAt": "2026-11-18T07:26:13Z"
+ },
+ "files": [
+  {
+   "path": "18ED2779-594A-4A33-BFDF-FD5481ED0010.mov",
+   "bytes": 4330949
+  },
+  {
+   "path": "1AD1931A-762E-4CD8-AF9F-D744518E3BA4.mov",
+   "bytes": 7919775
+  },
+  {
+   "path": "6C1E0BFB-DE69-4F1A-B3E9-4CD30F3E87C8.mov",
+   "bytes": 2091833
+  },
+  {
+   "path": "907EBDDC-A6D9-4CCC-B18A-1D94B200292E.mov",
+   "bytes": 2254138
+  },
+  {
+   "path": "E4720F71-9D06-48F3-9C21-66E6319FF266.mov",
+   "bytes": 2145945
+  },
+  {
+   "path": "F1170E5C-97EB-480E-BE58-EB16B37F2C04.mov",
+   "bytes": 2149462
+  },
+  {
+   "path": "F6D9D835-09C7-490F-B86A-043E9764BEBF.mov",
+   "bytes": 8916989
+  },
+  {
+   "path": "Sound/music-2BAB6304-EF90-48F4-B719-38A321C569F3.m4a",
+   "bytes": 2493927
+  },
+  {
+   "path": "ThumbnailEdit/F309508A-E57D-4A38-8505-C782ECF03356.jpg",
+   "bytes": 450667
+  },
+  {
+   "path": "ThumbnailEdit/document.json",
+   "bytes": 1162
+  },
+  {
+   "path": "assembled.edited",
+   "bytes": 0
+  },
+  {
+   "path": "assembled.mp4",
+   "bytes": 23002683
+  },
+  {
+   "path": "thumbnail.jpg",
+   "bytes": 278208
+  }
+ ]
+}
