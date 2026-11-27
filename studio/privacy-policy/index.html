@@ -27,7 +27,7 @@
 <p class="meta"><a href="/studio/">Emdalex Studio</a> · Privacy Policy</p>
 
 <h1>Emdalex Studio — Privacy Policy</h1>
-<p class="meta">Effective date: November 18, 2026</p>
+<p class="meta">Effective date: November 27, 2026</p>
 
 <p>Emdalex Studio (“the app”) is an iPhone app developed by Serhii Krotkih (“we”, “us”). It helps you record clips, build a video from them on your phone — with a cover, music and your voice — and, if you choose, save it to Photos, upload it or stream it live to your own YouTube channel. This policy explains what data the app uses, why, and where it goes. An Android version is in development; this policy will be updated before it is released.</p>
 
@@ -42,6 +42,14 @@
   <li><em>openid, email, profile</em> — your name, e-mail address and profile picture, shown in the app so you can see which account is signed in.</li>
 </ul>
 <p>The Google tokens and the profile information above are stored only on your iPhone (in the iOS Keychain) and are removed when you log out or delete the app. They are sent only to Google’s own servers.</p>
+
+<h3>Google Photos</h3>
+<p>When you tap <em>From Google Photos</em> (adding clips to a video) or <em>Add from Google Photos</em> (Images), the app asks you to sign in with the Google account that holds your photos and to allow one permission (OAuth scope):</p>
+<ul>
+  <li><em>photospicker.mediaitems.readonly</em> — see only the photos and videos you select in the Google Photos picker (Google Photos Picker API).</li>
+</ul>
+<p>You choose the items yourself in Google Photos; the app cannot see the rest of your library, your albums or anything else in your Google Photos account. The app downloads only the items you selected, once, right after you tap <em>Done</em>: a video becomes a clip of your video and a photo becomes a still clip or a picture in Images. The copies are kept on your iPhone, inside the app (and in your private iCloud if you use iCloud, as described below), like a video or photo picked in Photos. Nothing is uploaded to Google Photos, and nothing is sent to us. The picking session is deleted at Google as soon as the items are downloaded.</p>
+<p>This sign-in is separate from the YouTube sign-in. Its token is stored only on your iPhone (in the iOS Keychain, never synced) and is revoked and removed when you log out of the app.</p>
 
 <h3>Camera, microphone, Photos and Files</h3>
 <p>The app records video, photos and audio with the camera and microphone, and reads only the videos, pictures and music files you pick in Photos or Files. Clips, videos, sounds and pictures are kept on your iPhone, inside the app. The app adds a video to your photo library only when you tap <em>Save to Photos</em>. Nothing of this is sent to us.</p>
@@ -75,17 +83,17 @@
 <p>The app is free and is downloaded from the Apple App Store. It has no in-app purchases; we do not receive any payment or account details from Apple.</p>
 
 <h2>2. Data we collect</h2>
-<p>None. The app contains no analytics, advertising, crash-reporting or tracking SDKs and does not send data to us. We have no access to your Google account, your iCloud, your videos or your location.</p>
+<p>None. The app contains no analytics, advertising, crash-reporting or tracking SDKs and does not send data to us. We have no access to your Google account, your Google Photos, your iCloud, your videos or your location.</p>
 
 <h2>3. Google API Services — Limited Use</h2>
-<p>Emdalex Studio’s use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes">Google API Services User Data Policy</a>, including the Limited Use requirements. Google user data is used only to provide the features you see in the app, is never used for advertising, and is never transferred to anyone except as necessary to provide those features.</p>
+<p>Emdalex Studio’s use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes">Google API Services User Data Policy</a>, including the Limited Use requirements. Google user data (including the photos and videos you select in Google Photos) is used only to provide the features you see in the app, is not used to train AI or machine-learning models, is never used for advertising, and is never transferred to anyone except as necessary to provide those features.</p>
 
 <h2>4. Third parties</h2>
-<p>Your data is processed only by Google (Google Sign-In, YouTube Data API, YouTube upload, live ingestion and playback), by Apple (iCloud, the App Store) and, when you open them, by Pixabay’s web page and GitHub Pages (Emdalex Gallery and the sample video) as described above. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</p>
+<p>Your data is processed only by Google (Google Sign-In, YouTube Data API, YouTube upload, live ingestion and playback, Google Photos Picker API), by Apple (iCloud, the App Store) and, when you open them, by Pixabay’s web page and GitHub Pages (Emdalex Gallery and the sample video) as described above. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</p>
 
 <h2>5. Your control</h2>
 <ul>
-  <li><strong>Log Out</strong> in the app removes the Google tokens and profile data from your iPhone.</li>
+  <li><strong>Log Out</strong> in the app removes the Google tokens and profile data from your iPhone and revokes the app’s access to Google Photos.</li>
   <li><strong>Revoke the app’s access</strong> to your Google account at any time at <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a> (<a href="/studio/support/#revoke-access">how</a>).</li>
   <li><strong>Camera, microphone, Photos, local network, speech recognition, location, notifications, alarms and iCloud</strong> can be turned off at any time in your iPhone’s Settings.</li>
   <li><strong>Clips, videos, sounds and pictures</strong> can be deleted in the app; a video deleted on one iPhone is deleted from your iCloud and your other iPhones too. Deleting the app removes what is on that iPhone. Videos on YouTube can be deleted in the app or in YouTube Studio.</li>
